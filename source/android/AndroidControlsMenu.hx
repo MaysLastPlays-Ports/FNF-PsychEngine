@@ -2,7 +2,8 @@ package android;
 
 import flixel.util.FlxColor;
 import flixel.math.FlxPoint;
-import flixel.ui.FlxButton;
+import android.flixel.FlxButton;
+import flixel.input.touch.FlxTouch;
 import flixel.text.FlxText;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -36,9 +37,10 @@ class AndroidControlsMenu extends MusicBeatState
 		config = new Config();
 		curSelected = config.getcontrolmode();
 
-		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('menuDesat'));
-		bg.scrollFactor.set();
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg.screenCenter();
 		bg.color = FlxColor.fromHSB(FlxG.random.int(0, 359), FlxG.random.float(0, 0.8), FlxG.random.float(0.3, 1));
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
 		var titleText:Alphabet = new Alphabet(75, 60, "Android Controls", true);
@@ -197,7 +199,7 @@ class AndroidControlsMenu extends MusicBeatState
 		}
 	}
 
-	function trackbutton(touch:flixel.input.touch.FlxTouch){
+	function trackbutton(touch:FlxTouch){
 		var daChoice:String = controlitems[Math.floor(curSelected)];
 
 		if (daChoice == 'Pad-Custom'){
@@ -233,7 +235,7 @@ class AndroidControlsMenu extends MusicBeatState
 		}
 	}
 
-	function movebutton(touch:flixel.input.touch.FlxTouch, button:flixel.ui.FlxButton) {
+	function movebutton(touch:FlxTouch, button:FlxButton) {
 		button.x = touch.x - vpad.buttonUp.width / 2;
 		button.y = touch.y - vpad.buttonUp.height / 2;
 		bindbutton = button;
