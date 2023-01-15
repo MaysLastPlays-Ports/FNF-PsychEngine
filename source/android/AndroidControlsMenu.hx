@@ -6,6 +6,7 @@ import flixel.ui.FlxButton;
 import flixel.text.FlxText;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.transition.FlxTransitionableState;
 import android.FlxHitbox;
 import android.AndroidControls.Config;
 import android.FlxVirtualPad;
@@ -128,6 +129,8 @@ class AndroidControlsMenu extends MusicBeatState
 		if (FlxG.android.justReleased.BACK)
 		{
 			save();
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new options.OptionsState());
 		}
 		#end
