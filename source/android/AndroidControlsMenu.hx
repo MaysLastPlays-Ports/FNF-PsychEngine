@@ -43,9 +43,9 @@ class AndroidControlsMenu extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		var titleText:PsychAlphabet = new PsychAlphabet(0, 0, "Android Controls", true, false, 0, 0.6);
-		titleText.x += 60;
-		titleText.y += 40;
+		var titleText:Alphabet = new Alphabet(75, 60, "Android Controls", true);
+		titleText.scaleX = 0.6;
+		titleText.scaleY = 0.6;
 		titleText.alpha = 0.4;
 		add(titleText);
 
