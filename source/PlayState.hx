@@ -1934,7 +1934,8 @@ class PlayState extends MusicBeatState
 				});
 
 			case 'stress':
-				cutsceneHandler.endTime = 35.5;
+				startVideo('stressCutscene');
+				/*cutsceneHandler.endTime = 35.5;
 				tankman.x -= 54;
 				tankman.y -= 14;
 				gfGroup.alpha = 0.00001;
@@ -2093,7 +2094,7 @@ class PlayState extends MusicBeatState
 				cutsceneHandler.timer(32.2, function()
 				{
 					zoomBack();
-				});
+				});*/
 		}
 	}
 
