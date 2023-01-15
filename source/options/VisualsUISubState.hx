@@ -93,7 +93,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			'If unchecked, hides FPS Counter.',
 			'showFPS',
 			'bool',
-			true);
+			#if android false #else true #end);
 		addOption(option);
 		option.onChange = onChangeFPSCounter;
 		
