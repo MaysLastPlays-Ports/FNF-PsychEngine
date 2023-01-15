@@ -23,11 +23,7 @@ import haxe.Json;
 import haxe.format.JsonParser;
 import openfl.display.BitmapData;
 import flash.geom.Rectangle;
-#if android
-import android.flixel.FlxButton;
-#else
 import flixel.ui.FlxButton;
-#end
 import flixel.FlxBasic;
 import sys.io.File;
 /*import haxe.zip.Reader;

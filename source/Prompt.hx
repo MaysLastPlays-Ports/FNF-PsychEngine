@@ -4,11 +4,7 @@ import flixel.FlxSubState;
 import flixel.addons.ui.FlxUIButton;
 import flixel.addons.ui.FlxUIPopup;
 import flixel.text.FlxText;
-#if android
-import android.flixel.FlxButton;
-#else
 import flixel.ui.FlxButton;
-#end
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import openfl.display.BitmapData;
