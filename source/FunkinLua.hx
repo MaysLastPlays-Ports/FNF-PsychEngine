@@ -57,12 +57,16 @@ import hscript.Expr;
 import Discord;
 #end
 
+#if android
+import android.Hardware;
+#end
+
 using StringTools;
 
 class FunkinLua {
-	public static var Function_Stop:Dynamic = 1;
-	public static var Function_Continue:Dynamic = 0;
-	public static var Function_StopLua:Dynamic = 2;
+	public static var Function_Stop:Dynamic = #if android "Function_Stop" #else 1 #end;
+	public static var Function_Continue:Dynamic = #if android "Function_Continue" #else 0 #end;
+	public static var Function_StopLua:Dynamic = #if android "Function_StopLua" #else 2 #end;
 
 	//public var errorHandler:String->Void;
 	#if LUA_ALLOWED
@@ -91,7 +95,7 @@ class FunkinLua {
 			var resultStr:String = Lua.tostring(lua, result);
 			if(resultStr != null && result != 0) {
 				trace('Error on lua script! ' + resultStr);
-				#if windows
+				#if (windows || android)
 				lime.app.Application.current.window.alert(resultStr, 'Error on lua script!');
 				#else
 				luaTrace('Error loading lua script: "$script"\n' + resultStr, true, false, FlxColor.RED);
@@ -2327,6 +2331,11 @@ class FunkinLua {
 			#end
 		});
 
+		Lua_helper.add_callback(lua, "vibration", function(milliseconds:Int) {
+			#if android
+			Hardware.vibrate(milliseconds);
+			#end
+		});
 
 		// LUA TEXTS
 		Lua_helper.add_callback(lua, "makeLuaText", function(tag:String, text:String, width:Int, x:Float, y:Float) {

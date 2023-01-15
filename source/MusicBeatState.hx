@@ -64,7 +64,7 @@ class MusicBeatState extends FlxUIState
 
 	#if android
 	public function addAndroidControls() {
-        androidc = new AndroidControls();
+		androidc = new AndroidControls();
 
 		switch (androidc.mode)
 		{
@@ -81,7 +81,7 @@ class MusicBeatState extends FlxUIState
 		controls.trackedinputsNOTES = [];
 
 		var camcontrol = new flixel.FlxCamera();
-		FlxG.cameras.add(camcontrol);
+		FlxG.cameras.add(camcontrol, false);
 		camcontrol.bgColor.alpha = 0;
 		androidc.cameras = [camcontrol];
 
@@ -94,8 +94,8 @@ class MusicBeatState extends FlxUIState
 	#if android
         public function addPadCamera() {
 		var camcontrol = new flixel.FlxCamera();
-		FlxG.cameras.add(camcontrol);
 		camcontrol.bgColor.alpha = 0;
+		FlxG.cameras.add(camcontrol, false);
 		_virtualpad.cameras = [camcontrol];
 	}
 	#end
@@ -104,8 +104,8 @@ class MusicBeatState extends FlxUIState
 		#if android
 		controls.removeFlxInput(trackedinputsNOTES);
 		controls.removeFlxInput(trackedinputsUI);
-		#end	
-		
+		#end
+
 		super.destroy();
 	}
 
