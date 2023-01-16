@@ -1805,41 +1805,9 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	function tankIntro()
-	{
-		var cutsceneHandler:CutsceneHandler = new CutsceneHandler();
-
-		var songName:String = Paths.formatToSongPath(SONG.song);
-		dadGroup.alpha = 0.00001;
-		camHUD.visible = false;
-		//inCutscene = true; //this would stop the camera movement, oops
-
-		var tankman:FlxSprite = new FlxSprite(-20, 320);
-		tankman.frames = Paths.getSparrowAtlas('cutscenes/' + songName);
-		tankman.antialiasing = ClientPrefs.globalAntialiasing;
-		addBehindDad(tankman);
-		cutsceneHandler.push(tankman);
-
-		var tankman2:FlxSprite = new FlxSprite(16, 312);
-		tankman2.antialiasing = ClientPrefs.globalAntialiasing;
-		tankman2.alpha = 0.000001;
-		cutsceneHandler.push(tankman2);
-		var gfDance:FlxSprite = new FlxSprite(gf.x - 107, gf.y + 140);
-		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
-		cutsceneHandler.push(gfDance);
-		var gfCutscene:FlxSprite = new FlxSprite(gf.x - 104, gf.y + 122);
-		gfCutscene.antialiasing = ClientPrefs.globalAntialiasing;
-		cutsceneHandler.push(gfCutscene);
-		var picoCutscene:FlxSprite = new FlxSprite(gf.x - 849, gf.y - 264);
-		picoCutscene.antialiasing = ClientPrefs.globalAntialiasing;
-		cutsceneHandler.push(picoCutscene);
-		var boyfriendCutscene:FlxSprite = new FlxSprite(boyfriend.x + 5, boyfriend.y + 20);
-		boyfriendCutscene.antialiasing = ClientPrefs.globalAntialiasing;
-		cutsceneHandler.push(boyfriendCutscene);
-
-		cutsceneHandler.finishCallback = function()
+		var tankmanEnd:Void->Void = function()
 		{
-			var timeForStuff:Float = Conductor.crochet / 1000 * 4.5;
+			var timeForStuff:Float = Conductor.crochet / 1000 * 5;
 			FlxG.sound.music.fadeOut(timeForStuff);
 			FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, timeForStuff, {ease: FlxEase.quadInOut});
 			moveCamera(true);
@@ -1847,17 +1815,20 @@ class PlayState extends MusicBeatState
 
 			dadGroup.alpha = 1;
 			camHUD.visible = true;
-			boyfriend.animation.finishCallback = null;
-			gf.animation.finishCallback = null;
-			gf.dance();
+
+			var stuff:Array<FlxSprite> = [tankman, gfDance, gfCutscene, picoCutscene, boyfriendCutscene];
+			for (char in stuff)
+			{
+				char.kill();
+				remove(char);
+				char.destroy();
+			}
 		};
 
 		camFollow.set(dad.x + 280, dad.y + 170);
 		switch(songName)
 		{
 			case 'ugh':
-				cutsceneHandler.endTime = 12;
-				cutsceneHandler.music = 'DISTORTO';
 				precacheList.set('wellWellWell', 'sound');
 				precacheList.set('killYou', 'sound');
 				precacheList.set('bfBeep', 'sound');
@@ -1865,46 +1836,52 @@ class PlayState extends MusicBeatState
 				var wellWellWell:FlxSound = new FlxSound().loadEmbedded(Paths.sound('wellWellWell'));
 				FlxG.sound.list.add(wellWellWell);
 
+				FlxG.sound.playMusic(Paths.music('DISTORTO'), 0, false);
+				FlxG.sound.music.fadeIn();
+
 				tankman.animation.addByPrefix('wellWell', 'TANK TALK 1 P1', 24, false);
 				tankman.animation.addByPrefix('killYou', 'TANK TALK 1 P2', 24, false);
 				tankman.animation.play('wellWell', true);
 				FlxG.camera.zoom *= 1.2;
 
 				// Well well well, what do we got here?
-				cutsceneHandler.timer(0.1, function()
+				new FlxTimer().start(0.1, function(tmr:FlxTimer)
 				{
 					wellWellWell.play(true);
 				});
 
 				// Move camera to BF
-				cutsceneHandler.timer(3, function()
+				new FlxTimer().start(3, function(tmr:FlxTimer)
 				{
 					camFollow.x += 750;
 					camFollow.y += 100;
-				});
 
-				// Beep!
-				cutsceneHandler.timer(4.5, function()
-				{
-					boyfriend.playAnim('singUP', true);
-					boyfriend.specialAnim = true;
-					FlxG.sound.play(Paths.sound('bfBeep'));
-				});
+					// Beep!
+					new FlxTimer().start(1.5, function(tmr:FlxTimer)
+					{
+						boyfriend.playAnim('singUP', true);
+						boyfriend.specialAnim = true;
+						FlxG.sound.play(Paths.sound('bfBeep'));
+					});
 
-				// Move camera to Tankman
-				cutsceneHandler.timer(6, function()
-				{
-					camFollow.x -= 750;
-					camFollow.y -= 100;
+					// Move camera to Tankman
+					new FlxTimer().start(3, function(tmr:FlxTimer)
+					{
+						camFollow.x -= 750;
+						camFollow.y -= 100;
 
-					// We should just kill you but... what the hell, it's been a boring day... let's see what you've got!
-					tankman.animation.play('killYou', true);
-					FlxG.sound.play(Paths.sound('killYou'));
+						tankman.animation.play('killYou', true);
+						FlxG.sound.play(Paths.sound('killYou'));
+
+						// We should just kill you but... what the hell, it's been a boring day... let's see what you've got!
+						new FlxTimer().start(6.1, function(tmr:FlxTimer)
+						{
+							tankmanEnd();
+						});
+					});
 				});
 
 			case 'guns':
-				cutsceneHandler.endTime = 11.5;
-				cutsceneHandler.music = 'DISTORTO';
 				tankman.x += 40;
 				tankman.y += 10;
 				precacheList.set('tankSong2', 'sound');
@@ -1912,19 +1889,22 @@ class PlayState extends MusicBeatState
 				var tightBars:FlxSound = new FlxSound().loadEmbedded(Paths.sound('tankSong2'));
 				FlxG.sound.list.add(tightBars);
 
+				FlxG.sound.playMusic(Paths.music('DISTORTO'), 0, false);
+				FlxG.sound.music.fadeIn();
+
+				new FlxTimer().start(0.01, function(tmr:FlxTimer) //Fixes sync????
+				{
+					tightBars.play(true);
+				});
+
 				tankman.animation.addByPrefix('tightBars', 'TANK TALK 2', 24, false);
 				tankman.animation.play('tightBars', true);
 				boyfriend.animation.curAnim.finish();
 
-				cutsceneHandler.onStart = function()
-				{
-					tightBars.play(true);
-					FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 4, {ease: FlxEase.quadInOut});
-					FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2 * 1.2}, 0.5, {ease: FlxEase.quadInOut, startDelay: 4});
-					FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1, {ease: FlxEase.quadInOut, startDelay: 4.5});
-				};
-
-				cutsceneHandler.timer(4, function()
+				FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 4, {ease: FlxEase.quadInOut});
+				FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2 * 1.2}, 0.5, {ease: FlxEase.quadInOut, startDelay: 4});
+				FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom * 1.2}, 1, {ease: FlxEase.quadInOut, startDelay: 4.5});
+				new FlxTimer().start(4, function(tmr:FlxTimer)
 				{
 					gf.playAnim('sad', true);
 					gf.animation.finishCallback = function(name:String)
@@ -1933,8 +1913,14 @@ class PlayState extends MusicBeatState
 					};
 				});
 
-			case 'stress':
-				//startVideo('stressCutscene');
+				new FlxTimer().start(11.6, function(tmr:FlxTimer)
+				{
+					tankmanEnd();
+
+					gf.dance();
+					gf.animation.finishCallback = null;
+				});
+
 			case 'stress':
 				tankman.x -= 54;
 				tankman.y -= 14;
