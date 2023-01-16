@@ -2088,7 +2088,6 @@ class PlayState extends MusicBeatState
 					boyfriend.animation.finishCallback = null;
 				});
 		}
-	}
 
 	var startTimer:FlxTimer;
 	var finishTimer:FlxTimer = null;
