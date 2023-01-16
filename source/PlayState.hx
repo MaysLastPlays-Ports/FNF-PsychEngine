@@ -1371,8 +1371,7 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 
-				case 'ugh' | 'guns' | 'stress':
-					tankIntro();
+				//case 'ugh' | 'guns' | 'stress':
 
 				default:
 					startCountdown();
@@ -1805,7 +1804,7 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	function tankIntro()
+	/*function tankIntro()
 	{
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		dadGroup.alpha = 0.00001;
@@ -2109,7 +2108,7 @@ class PlayState extends MusicBeatState
 					boyfriend.animation.finishCallback = null;
 				});
 		}
-	}
+	}*/
 
 	var startTimer:FlxTimer;
 	var finishTimer:FlxTimer = null;
