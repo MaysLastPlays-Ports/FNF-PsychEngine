@@ -1934,8 +1934,8 @@ class PlayState extends MusicBeatState
 				});
 
 			case 'stress':
-				startVideo('stressCutscene');
-				/*cutsceneHandler.endTime = 35.5;
+				//startVideo('stressCutscene');
+			case 'stress':
 				tankman.x -= 54;
 				tankman.y -= 14;
 				gfGroup.alpha = 0.00001;
@@ -1948,8 +1948,8 @@ class PlayState extends MusicBeatState
 				});
 				precacheList.set('stressCutscene', 'sound');
 
-				tankman2.frames = Paths.getSparrowAtlas('cutscenes/stress2');
-				addBehindDad(tankman2);
+				var tankman2 = Paths.getSparrowAtlas('cutscenes/stress2');
+				precacheList.set('cutscenes/stress2', 'image');
 
 				if (!ClientPrefs.lowQuality)
 				{
@@ -2007,15 +2007,19 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				cutsceneHandler.onStart = function()
+				new FlxTimer().start(0.01, function(tmr:FlxTimer) //Fixes sync????
 				{
 					cutsceneSnd.play(true);
-				};
+				});
 
-				cutsceneHandler.timer(15.2, function()
+				new FlxTimer().start(15.2, function(tmr:FlxTimer)
 				{
 					FlxTween.tween(camFollow, {x: 650, y: 300}, 1, {ease: FlxEase.sineOut});
 					FlxTween.tween(FlxG.camera, {zoom: 0.9 * 1.2 * 1.2}, 2.25, {ease: FlxEase.quadInOut});
+					new FlxTimer().start(2.3, function(tmr:FlxTimer)
+					{
+						zoomBack();
+					});
 
 					gfDance.visible = false;
 					gfCutscene.alpha = 1;
@@ -2056,25 +2060,21 @@ class PlayState extends MusicBeatState
 					};
 				});
 
-				cutsceneHandler.timer(17.5, function()
+				new FlxTimer().start(19.5, function(tmr:FlxTimer)
 				{
-					zoomBack();
+					tankman.frames = tankman2;
+					tankman.animation.addByPrefix('lookWhoItIs', 'TANK TALK 3', 24, false);
+					tankman.animation.play('lookWhoItIs', true);
+					tankman.x += 90;
+					tankman.y += 6;
+
+					new FlxTimer().start(0.5, function(tmr:FlxTimer)
+					{
+						camFollow.set(dad.x + 500, dad.y + 170);
+					});
 				});
 
-				cutsceneHandler.timer(19.5, function()
-				{
-					tankman2.animation.addByPrefix('lookWhoItIs', 'TANK TALK 3', 24, false);
-					tankman2.animation.play('lookWhoItIs', true);
-					tankman2.alpha = 1;
-					tankman.visible = false;
-				});
-
-				cutsceneHandler.timer(20, function()
-				{
-					camFollow.set(dad.x + 500, dad.y + 170);
-				});
-
-				cutsceneHandler.timer(31.2, function()
+				new FlxTimer().start(31.2, function(tmr:FlxTimer)
 				{
 					boyfriend.playAnim('singUPmiss', true);
 					boyfriend.animation.finishCallback = function(name:String)
@@ -2089,12 +2089,18 @@ class PlayState extends MusicBeatState
 					camFollow.set(boyfriend.x + 280, boyfriend.y + 200);
 					cameraSpeed = 12;
 					FlxTween.tween(FlxG.camera, {zoom: 0.9 * 1.2 * 1.2}, 0.25, {ease: FlxEase.elasticOut});
+
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						zoomBack();
+					});
 				});
 
-				cutsceneHandler.timer(32.2, function()
+				new FlxTimer().start(35.5, function(tmr:FlxTimer)
 				{
-					zoomBack();
-				});*/
+					tankmanEnd();
+					boyfriend.animation.finishCallback = null;
+				});
 		}
 	}
 
