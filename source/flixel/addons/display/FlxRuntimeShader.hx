@@ -1,6 +1,6 @@
 package flixel.addons.display;
 
-import flixel.system.FlxAssets.FlxShader;
+import FlxShader;
 import lime.utils.Float32Array;
 import openfl.display.BitmapData;
 import openfl.display.ShaderInput;
