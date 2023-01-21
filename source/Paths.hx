@@ -435,17 +435,17 @@ class Paths
 		return modFolders('images/' + key + '.txt');
 	}
 
+	/* Goes unused for now
+
 	inline static public function modsShaderFragment(key:String, ?library:String)
 	{
-		return modFolders('shaders/' + key + '.frag');
+		return modFolders('shaders/'+key+'.frag');
 	}
-
 	inline static public function modsShaderVertex(key:String, ?library:String)
 	{
-		return modFolders('shaders/' + key + '.vert');
+		return modFolders('shaders/'+key+'.vert');
 	}
-
-	/*inline static public function modsAchievements(key:String) {
+	inline static public function modsAchievements(key:String) {
 		return modFolders('achievements/' + key + '.json');
 	}*/
 
