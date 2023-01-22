@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NewNonsense.png">
+	<!-- Created with Adobe Animate version 19.1.0.349 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bruh0000" x="3672" y="7094" width="269" height="653" frameX="0" frameY="0" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0001" x="3672" y="7094" width="269" height="653" frameX="0" frameY="0" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0002" x="3734" y="663" width="277" height="651" frameX="-6" frameY="-2" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0003" x="5041" y="3221" width="261" height="639" frameX="-23" frameY="-14" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0004" x="5090" y="1306" width="262" height="635" frameX="-27" frameY="-18" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0005" x="5090" y="1306" width="262" height="635" frameX="-27" frameY="-18" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0006" x="5355" y="648" width="263" height="632" frameX="-24" frameY="-21" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0007" x="5390" y="5" width="263" height="632" frameX="-24" frameY="-21" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0008" x="4580" y="643" width="270" height="633" frameX="-18" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0009" x="4580" y="643" width="270" height="633" frameX="-18" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0010" x="4380" y="5" width="273" height="633" frameX="-13" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0011" x="4380" y="5" width="273" height="633" frameX="-13" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0012" x="4014" y="2606" width="272" height="633" frameX="-14" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0013" x="4014" y="2606" width="272" height="633" frameX="-14" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0014" x="4014" y="2606" width="272" height="633" frameX="-14" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Bruh0015" x="4014" y="2606" width="272" height="633" frameX="-14" frameY="-20" frameWidth="289" frameHeight="653"/>
+	<SubTexture name="Idle0000" x="2502" y="3235" width="303" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0001" x="2180" y="3243" width="317" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0002" x="3385" y="5144" width="286" height="644" frameX="-12" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0003" x="3385" y="5144" width="286" height="644" frameX="-12" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0004" x="3513" y="5" width="287" height="653" frameX="-6" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0005" x="3513" y="5" width="287" height="653" frameX="-6" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0006" x="2931" y="5" width="286" height="658" frameX="-2" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0007" x="2931" y="5" width="286" height="658" frameX="-2" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0008" x="2795" y="6468" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0009" x="2795" y="6468" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0010" x="2802" y="5152" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0011" x="2802" y="5152" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0012" x="3375" y="6403" width="283" height="659" frameX="-3" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0013" x="3105" y="4481" width="284" height="658" frameX="-3" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0014" x="3167" y="1933" width="282" height="658" frameX="-5" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0015" x="4820" y="1939" width="265" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0016" x="5024" y="5879" width="265" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0017" x="4316" y="1285" width="266" height="644" frameX="-32" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0018" x="4316" y="1285" width="266" height="644" frameX="-32" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0019" x="2492" y="5152" width="290" height="653" frameX="-30" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0020" x="2492" y="5152" width="290" height="653" frameX="-30" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0021" x="2491" y="3886" width="298" height="658" frameX="-28" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0022" x="2491" y="3886" width="298" height="658" frameX="-28" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0023" x="1576" y="7208" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0024" x="1576" y="7208" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0025" x="1882" y="7208" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0026" x="1882" y="7208" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0027" x="2186" y="4549" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0028" x="2494" y="6541" width="296" height="658" frameX="-32" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle0029" x="1892" y="5917" width="304" height="658" frameX="-32" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0000" x="2520" y="2592" width="303" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0001" x="2198" y="2592" width="317" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0002" x="3454" y="1933" width="286" height="644" frameX="-12" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0003" x="3454" y="1933" width="286" height="644" frameX="-12" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0004" x="3093" y="5145" width="287" height="653" frameX="-6" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0005" x="3093" y="5145" width="287" height="653" frameX="-6" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0006" x="3140" y="668" width="286" height="658" frameX="-2" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0007" x="3140" y="668" width="286" height="658" frameX="-2" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0008" x="2814" y="4481" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0009" x="2814" y="4481" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0010" x="2849" y="1211" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0011" x="2849" y="1211" width="286" height="659" frameX="0" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0012" x="3384" y="7067" width="283" height="659" frameX="-3" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0013" x="3086" y="6418" width="284" height="658" frameX="-3" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0014" x="3429" y="2596" width="282" height="658" frameX="-5" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0015" x="5085" y="663" width="265" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0016" x="5120" y="5" width="265" height="638" frameX="-33" frameY="-21" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0017" x="4291" y="2593" width="266" height="644" frameX="-32" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0018" x="4291" y="2593" width="266" height="644" frameX="-32" frameY="-15" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0019" x="2507" y="5810" width="290" height="653" frameX="-30" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0020" x="2507" y="5810" width="290" height="653" frameX="-30" frameY="-6" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0021" x="2188" y="7244" width="298" height="658" frameX="-28" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0022" x="2188" y="7244" width="298" height="658" frameX="-28" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0023" x="2186" y="5213" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0024" x="2186" y="5213" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0025" x="2188" y="6580" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0026" x="2188" y="6580" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0027" x="2201" y="5877" width="301" height="659" frameX="-27" frameY="0" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0028" x="2794" y="7204" width="296" height="658" frameX="-32" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Idle Tired0029" x="2182" y="3886" width="304" height="658" frameX="-32" frameY="-1" frameWidth="350" frameHeight="659"/>
+	<SubTexture name="Left Tired0000" x="830" y="4561" width="346" height="648"/>
+	<SubTexture name="Left Tired0001" x="1181" y="3979" width="337" height="641" frameX="-6" frameY="-7" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0002" x="1837" y="5271" width="333" height="641" frameX="-7" frameY="-7" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0003" x="1855" y="1949" width="337" height="643" frameX="-3" frameY="-5" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0004" x="1233" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0005" x="1233" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0006" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0007" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0008" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0009" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0010" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0011" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0012" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0013" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0014" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0015" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0016" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0017" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0018" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0019" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0020" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0021" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0022" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="Left Tired0023" x="1178" y="1340" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NHEatingPringels0000" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0001" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0002" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0003" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0004" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0005" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0006" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0007" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0008" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0009" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0010" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0011" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0012" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0013" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0014" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0015" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0016" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0017" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0018" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0019" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0020" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0021" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0022" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0023" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0024" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0025" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0026" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0027" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0028" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0029" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0030" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0031" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0032" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0033" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0034" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0035" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0036" x="5023" y="3905" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0037" x="5023" y="3905" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0038" x="5023" y="4563" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0039" x="5023" y="4563" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0040" x="5024" y="5221" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0041" x="5024" y="5221" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0042" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0043" x="4759" y="5874" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0044" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0045" x="5021" y="6532" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0046" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0047" x="5021" y="7190" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0048" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0049" x="4776" y="2589" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0050" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0051" x="4820" y="1281" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0052" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0053" x="4855" y="5" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0054" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHEatingPringels0055" x="4776" y="3247" width="260" height="653"/>
+	<SubTexture name="NHLookadis0000" x="3946" y="7094" width="269" height="653" frameX="-13" frameY="0" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0001" x="3946" y="7094" width="269" height="653" frameX="-13" frameY="0" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0002" x="3946" y="7094" width="269" height="653" frameX="-13" frameY="0" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0003" x="3672" y="6438" width="270" height="651" frameX="-12" frameY="-2" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0004" x="3672" y="6438" width="270" height="651" frameX="-12" frameY="-2" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0005" x="2549" y="1296" width="295" height="649" frameX="-10" frameY="-4" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0006" x="2197" y="1948" width="338" height="639" frameX="0" frameY="-14" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0007" x="2269" y="651" width="335" height="640" frameX="-2" frameY="-13" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0008" x="2269" y="651" width="335" height="640" frameX="-2" frameY="-13" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0009" x="2209" y="1297" width="335" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0010" x="2209" y="1297" width="335" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0011" x="1506" y="4625" width="337" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0012" x="1506" y="4625" width="337" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0013" x="1523" y="3979" width="337" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0014" x="1524" y="3281" width="337" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0015" x="549" y="5" width="346" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0016" x="493" y="2591" width="347" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0017" x="493" y="3237" width="347" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0018" x="882" y="7219" width="342" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0019" x="1229" y="7219" width="342" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0020" x="1510" y="1989" width="340" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0021" x="1522" y="1303" width="340" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0022" x="1180" y="3333" width="339" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0023" x="1180" y="3333" width="339" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0024" x="1926" y="651" width="338" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0025" x="882" y="6573" width="346" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0026" x="546" y="1302" width="347" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0027" x="548" y="655" width="347" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0028" x="1159" y="5214" width="342" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0029" x="1159" y="5860" width="342" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0030" x="1581" y="654" width="340" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0031" x="1921" y="5" width="340" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0032" x="1512" y="2635" width="339" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0033" x="1512" y="2635" width="339" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHLookadis0034" x="2266" y="5" width="338" height="641" frameX="-3" frameY="-12" frameWidth="350" frameHeight="653"/>
+	<SubTexture name="NHTHinkLol0000" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0001" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0002" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0003" x="4756" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0004" x="4756" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0005" x="4511" y="3242" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0006" x="4511" y="3242" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0007" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0008" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0009" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0010" x="4758" y="4558" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0011" x="4758" y="4558" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0012" x="4758" y="5216" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0013" x="4758" y="5216" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0014" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0015" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0016" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0017" x="4756" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0018" x="4756" y="7187" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0019" x="4511" y="3242" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0020" x="4511" y="3242" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0021" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0022" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0023" x="4511" y="3900" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0024" x="4758" y="4558" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0025" x="4758" y="4558" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0026" x="4758" y="5216" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0027" x="4758" y="5216" width="260" height="653"/>
+	<SubTexture name="NHTHinkLol0028" x="4491" y="7187" width="260" height="653"/>
+	<SubTexture name="Nonsense shoot gun0000" x="5307" y="3221" width="252" height="588" frameX="-18" frameY="-57" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0001" x="5307" y="3221" width="252" height="588" frameX="-18" frameY="-57" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0002" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0003" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0004" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0005" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0006" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0007" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0008" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0009" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0010" x="3460" y="1302" width="252" height="590" frameX="-18" frameY="-55" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0011" x="5356" y="1946" width="249" height="594" frameX="-19" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0012" x="5356" y="1946" width="249" height="594" frameX="-19" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0013" x="4759" y="6532" width="250" height="595" frameX="-19" frameY="-50" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0014" x="4759" y="6532" width="250" height="595" frameX="-19" frameY="-50" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0015" x="5357" y="1285" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0016" x="5357" y="1285" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0017" x="5288" y="3865" width="249" height="596" frameX="-20" frameY="-49" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0018" x="1906" y="6580" width="253" height="587" frameX="-17" frameY="-58" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0019" x="5311" y="2581" width="250" height="592" frameX="-19" frameY="-53" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0020" x="5311" y="2581" width="250" height="592" frameX="-19" frameY="-53" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0021" x="5288" y="4466" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0022" x="5288" y="4466" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0023" x="5288" y="4466" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0024" x="5288" y="4466" width="249" height="594" frameX="-20" frameY="-51" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0025" x="898" y="1340" width="250" height="601" frameX="-19" frameY="-44" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0026" x="898" y="1340" width="250" height="601" frameX="-19" frameY="-44" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0027" x="5" y="5216" width="441" height="644" frameX="0" frameY="-1" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0028" x="5" y="5216" width="441" height="644" frameX="0" frameY="-1" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0029" x="5" y="5865" width="437" height="642" frameX="-2" frameY="-3" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0030" x="5" y="5865" width="437" height="642" frameX="-2" frameY="-3" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0031" x="5" y="7158" width="434" height="642" frameX="-5" frameY="-3" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0032" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0033" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0034" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0035" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0036" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0037" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0038" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0039" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0040" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0041" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0042" x="5" y="1949" width="520" height="637" frameX="-5" frameY="-8" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0043" x="5" y="1302" width="536" height="642" frameX="-2" frameY="-3" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0044" x="5" y="655" width="538" height="642" frameX="-2" frameY="-3" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0045" x="5" y="5" width="539" height="645" frameX="-1" frameY="0" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0046" x="489" y="3911" width="353" height="645" frameX="-1" frameY="0" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0047" x="444" y="7158" width="433" height="635" frameX="-11" frameY="-10" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0048" x="444" y="7158" width="433" height="635" frameX="-11" frameY="-10" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0049" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0050" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0051" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0052" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0053" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0054" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="Nonsense shoot gun0055" x="5" y="6512" width="435" height="641" frameX="-5" frameY="-4" frameWidth="540" frameHeight="645"/>
+	<SubTexture name="NoteDown0000" x="2847" y="1950" width="315" height="598" frameX="-9" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0001" x="847" y="3964" width="318" height="590" frameX="-2" frameY="-8" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0002" x="2828" y="2586" width="318" height="594" frameX="0" frameY="-4" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0003" x="3116" y="3838" width="314" height="595" frameX="-2" frameY="-3" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0004" x="2802" y="5816" width="315" height="597" frameX="-3" frameY="-1" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0005" x="2794" y="3878" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0006" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0007" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0008" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0009" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0010" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0011" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0012" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0013" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0014" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteDown0015" x="2810" y="3235" width="317" height="598" frameX="-3" frameY="0" frameWidth="324" frameHeight="598"/>
+	<SubTexture name="NoteLeft0000" x="3394" y="4438" width="288" height="639" frameX="-5" frameY="-1" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0001" x="3805" y="5" width="283" height="636" frameX="-2" frameY="-4" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0002" x="3998" y="1964" width="281" height="637" frameX="0" frameY="-3" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0003" x="3687" y="3903" width="281" height="639" frameX="-1" frameY="-1" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0004" x="3745" y="1319" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0005" x="3745" y="1319" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0006" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0007" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0008" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0009" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0010" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0011" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0012" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0013" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0014" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0015" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0016" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0017" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteLeft0018" x="4016" y="646" width="281" height="640" frameX="-1" frameY="0" frameWidth="293" frameHeight="640"/>
+	<SubTexture name="NoteRight0000" x="808" y="5920" width="346" height="648"/>
+	<SubTexture name="NoteRight0001" x="1856" y="2597" width="337" height="641" frameX="-6" frameY="-7" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0002" x="1848" y="4625" width="333" height="641" frameX="-7" frameY="-7" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0003" x="1867" y="1300" width="337" height="643" frameX="-3" frameY="-5" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0004" x="1237" y="654" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0005" x="1237" y="654" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0006" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0007" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0008" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0009" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0010" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0011" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0012" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0013" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0014" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0015" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0016" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0017" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0018" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0019" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0020" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0021" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0022" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteRight0023" x="1577" y="5" width="339" height="644" frameX="-2" frameY="-4" frameWidth="346" frameHeight="648"/>
+	<SubTexture name="NoteUp0000" x="1866" y="3243" width="309" height="675" frameX="-15" frameY="0" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0001" x="1865" y="3927" width="312" height="670" frameX="-19" frameY="-5" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0002" x="1566" y="5934" width="321" height="666" frameX="-9" frameY="-9" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0003" x="1178" y="1989" width="327" height="667" frameX="-1" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0004" x="1233" y="6506" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0005" x="1233" y="6506" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0006" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0007" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0008" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0009" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0010" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0011" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0012" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0013" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0014" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0015" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="NoteUp0016" x="845" y="1948" width="328" height="667" frameX="0" frameY="-8" frameWidth="331" frameHeight="675"/>
+	<SubTexture name="Right Tired0000" x="3435" y="3259" width="288" height="639" frameX="-5" frameY="-1" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0001" x="3132" y="3185" width="292" height="636" frameX="-2" frameY="-4" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0002" x="530" y="1949" width="303" height="637" frameX="0" frameY="-3" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0003" x="3728" y="3241" width="281" height="639" frameX="-1" frameY="-1" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0004" x="3663" y="5793" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0005" x="3663" y="5793" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0006" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0007" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0008" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0009" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0010" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0011" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0012" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0013" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0014" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0015" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0016" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0017" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Right Tired0018" x="3676" y="5082" width="281" height="640" frameX="-1" frameY="0" frameWidth="303" frameHeight="640"/>
+	<SubTexture name="Up tired0000" x="475" y="4569" width="350" height="675" frameX="0" frameY="0" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0001" x="447" y="5865" width="356" height="670" frameX="-1" frameY="-5" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0002" x="808" y="5249" width="346" height="666" frameX="-10" frameY="-9" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0003" x="1180" y="2661" width="327" height="667" frameX="-27" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0004" x="845" y="2620" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0005" x="847" y="3292" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0006" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0007" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0008" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0009" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0010" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0011" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0012" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0013" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0014" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0015" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="Up tired0016" x="900" y="5" width="328" height="667" frameX="-26" frameY="-8" frameWidth="357" frameHeight="675"/>
+	<SubTexture name="down tired0000" x="1566" y="6605" width="335" height="598" frameX="-9" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0001" x="451" y="5249" width="350" height="590" frameX="-2" frameY="-8" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0002" x="445" y="6540" width="356" height="594" frameX="0" frameY="-4" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0003" x="3122" y="5803" width="314" height="595" frameX="-2" frameY="-3" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0004" x="3140" y="1331" width="315" height="597" frameX="-3" frameY="-1" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0005" x="2609" y="5" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0006" x="2609" y="608" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0007" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0008" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0009" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0010" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0011" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0012" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0013" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0014" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="down tired0015" x="2492" y="4549" width="317" height="598" frameX="-3" frameY="0" frameWidth="356" frameHeight="598"/>
+	<SubTexture name="huh0000" x="4222" y="5845" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0001" x="4552" y="1934" width="263" height="650" frameX="-120" frameY="-5" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0002" x="4552" y="1934" width="263" height="650" frameX="-120" frameY="-5" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0003" x="5090" y="1946" width="261" height="630" frameX="-125" frameY="-24" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0004" x="4302" y="644" width="273" height="636" frameX="-124" frameY="-18" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0005" x="5" y="3911" width="479" height="653" frameX="-2" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0006" x="5" y="3911" width="479" height="653" frameX="-2" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0007" x="5" y="2591" width="483" height="655"/>
+	<SubTexture name="huh0008" x="5" y="2591" width="483" height="655"/>
+	<SubTexture name="huh0009" x="5" y="3251" width="483" height="655"/>
+	<SubTexture name="huh0010" x="5" y="3251" width="483" height="655"/>
+	<SubTexture name="huh0011" x="5" y="3251" width="483" height="655"/>
+	<SubTexture name="huh0012" x="5" y="3251" width="483" height="655"/>
+	<SubTexture name="huh0013" x="5" y="4569" width="465" height="642" frameX="-8" frameY="-12" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0014" x="5" y="4569" width="465" height="642" frameX="-8" frameY="-12" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0015" x="3962" y="4547" width="272" height="635" frameX="-114" frameY="-20" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0016" x="3973" y="3885" width="265" height="651" frameX="-118" frameY="-4" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0017" x="3973" y="3885" width="265" height="651" frameX="-118" frameY="-4" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0018" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0019" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0020" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0021" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0022" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0023" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0024" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0025" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0026" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0027" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0028" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0029" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="huh0030" x="4243" y="3244" width="263" height="653" frameX="-120" frameY="-2" frameWidth="483" frameHeight="655"/>
+	<SubTexture name="oh no0000" x="4284" y="1935" width="263" height="653" frameX="-45" frameY="-4" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0001" x="4284" y="1935" width="263" height="653" frameX="-45" frameY="-4" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0002" x="3947" y="6438" width="270" height="650" frameX="-43" frameY="-7" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0003" x="4031" y="1291" width="280" height="639" frameX="-52" frameY="-18" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0004" x="5041" y="2582" width="265" height="634" frameX="-61" frameY="-23" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0005" x="4093" y="5" width="282" height="634" frameX="-44" frameY="-23" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0006" x="3431" y="667" width="298" height="630" frameX="-41" frameY="-27" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0007" x="3431" y="667" width="298" height="630" frameX="-41" frameY="-27" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0008" x="2540" y="1950" width="302" height="631" frameX="-40" frameY="-26" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0009" x="2540" y="1950" width="302" height="631" frameX="-40" frameY="-26" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0010" x="2491" y="7244" width="298" height="656" frameX="-4" frameY="-2" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0011" x="1506" y="5271" width="326" height="658" frameX="0" frameY="0" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0012" x="900" y="677" width="332" height="658" frameX="0" frameY="0" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0013" x="3222" y="5" width="286" height="657" frameX="-47" frameY="-1" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0014" x="3095" y="7081" width="284" height="657" frameX="-47" frameY="-1" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0015" x="3716" y="2582" width="277" height="654" frameX="-54" frameY="-4" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0016" x="3949" y="5727" width="268" height="654" frameX="-54" frameY="-4" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0017" x="4220" y="7093" width="266" height="653" frameX="-56" frameY="-5" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0018" x="4222" y="5187" width="263" height="653" frameX="-56" frameY="-5" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0019" x="4243" y="3902" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0020" x="4490" y="4559" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0021" x="4490" y="4559" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0022" x="4490" y="5216" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0023" x="4490" y="5216" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0024" x="4490" y="5873" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0025" x="4490" y="5873" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0026" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0027" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0028" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0029" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0030" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0031" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0032" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+	<SubTexture name="oh no0033" x="4491" y="6530" width="263" height="652" frameX="-56" frameY="-6" frameWidth="342" frameHeight="658"/>
+</TextureAtlas>
