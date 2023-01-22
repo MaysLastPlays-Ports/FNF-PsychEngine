@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NonsenseBop.png">
+	<!-- Created with Adobe Animate version 19.1.0.349 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="NonsenseDancemenu0000" x="5" y="5" width="1127" height="996" frameX="-4" frameY="-14" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0001" x="5" y="5" width="1127" height="996" frameX="-4" frameY="-14" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0002" x="1137" y="5" width="1129" height="996" frameX="-5" frameY="-14" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0003" x="1137" y="5" width="1129" height="996" frameX="-5" frameY="-14" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0004" x="2271" y="5" width="1132" height="998" frameX="-4" frameY="-12" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0005" x="2271" y="5" width="1132" height="998" frameX="-4" frameY="-12" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0006" x="5" y="1008" width="1132" height="1004" frameX="0" frameY="-6" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0007" x="5" y="1008" width="1132" height="1004" frameX="0" frameY="-6" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0008" x="1142" y="1008" width="1132" height="1009" frameX="0" frameY="-1" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0009" x="1142" y="1008" width="1132" height="1009" frameX="0" frameY="-1" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0010" x="2279" y="1008" width="1132" height="1010" frameX="0" frameY="0" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0011" x="2279" y="1008" width="1132" height="1010" frameX="0" frameY="0" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0012" x="5" y="2023" width="1132" height="1010" frameX="0" frameY="0" frameWidth="1136" frameHeight="1010"/>
+	<SubTexture name="NonsenseDancemenu0013" x="5" y="2023" width="1132" height="1010" frameX="0" frameY="0" frameWidth="1136" frameHeight="1010"/>
+</TextureAtlas>
