@@ -1855,7 +1855,7 @@ class ChartingState extends MusicBeatState
 			//AWW YOU MADE IT SEXY <3333 THX SHADMAR
 
 			if(!blockInput){
-				if(FlxG.keys.justPressed.RIGHT #if android || _virtualpad.buttonRight.justPressed #end){
+				if(FlxG.keys.justPressed.RIGHT){
 					curQuant++;
 					if(curQuant>quantizations.length-1)
 						curQuant = 0;
@@ -1863,7 +1863,7 @@ class ChartingState extends MusicBeatState
 					quantization = quantizations[curQuant];
 				}
 
-				if(FlxG.keys.justPressed.LEFT #if android || _virtualpad.buttonLeft.justPressed #end){
+				if(FlxG.keys.justPressed.LEFT){
 					curQuant--;
 					if(curQuant<0)
 						curQuant = quantizations.length-1;
