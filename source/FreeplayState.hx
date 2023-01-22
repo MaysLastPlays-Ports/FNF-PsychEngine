@@ -78,6 +78,9 @@ class FreeplayState extends MusicBeatState
 			}
 
 			WeekData.setDirectoryFromWeek(leWeek);
+
+			var dirThing = FileSystem.readDirectory(SUtil.getPath + 'assets/songs')
+
 			for (song in leWeek.songs)
 			{
 				var colors:Array<Int> = song[2];
