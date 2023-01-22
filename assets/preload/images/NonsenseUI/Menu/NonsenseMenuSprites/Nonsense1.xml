@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NonsenseThink.png">
+	<!-- Created with Adobe Animate version 19.1.0.349 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nonsense0000" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0001" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0002" x="732" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0003" x="732" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0004" x="1464" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0005" x="2196" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0006" x="2196" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0007" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0008" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0009" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0010" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0011" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0012" x="2928" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0013" x="2196" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0014" x="2196" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0015" x="1464" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0016" x="732" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0017" x="732" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0018" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0019" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0020" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0021" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0022" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0023" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0024" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0025" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0026" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0027" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0028" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0029" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0030" x="0" y="1118" width="727" height="1113"/>
+	<SubTexture name="Nonsense0031" x="732" y="1118" width="727" height="1113"/>
+	<SubTexture name="Nonsense0032" x="0" y="1118" width="727" height="1113"/>
+	<SubTexture name="Nonsense0033" x="0" y="1118" width="727" height="1113"/>
+	<SubTexture name="Nonsense0034" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0035" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0036" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0037" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0038" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0039" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0040" x="0" y="0" width="727" height="1113"/>
+	<SubTexture name="Nonsense0041" x="0" y="0" width="727" height="1113"/>
+</TextureAtlas>

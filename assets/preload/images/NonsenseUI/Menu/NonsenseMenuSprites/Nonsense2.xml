@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="UI concepts.png">
+	<!-- Created with Adobe Animate version 19.1.0.349 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nonsense0000" x="961" y="1447" width="898" height="1440" frameX="-7" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0001" x="961" y="1447" width="898" height="1440" frameX="-7" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0002" x="5" y="2897" width="932" height="1442" frameX="0" frameY="0" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0003" x="5" y="5" width="951" height="1442" frameX="-9" frameY="0" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0004" x="5" y="5" width="951" height="1442" frameX="-9" frameY="0" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0005" x="5" y="4344" width="929" height="1440" frameX="-9" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0006" x="961" y="5" width="915" height="1437" frameX="-9" frameY="-5" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0007" x="961" y="5" width="915" height="1437" frameX="-9" frameY="-5" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0008" x="942" y="2897" width="922" height="1440" frameX="-9" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0009" x="5" y="1452" width="951" height="1440" frameX="-9" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0010" x="5" y="1452" width="951" height="1440" frameX="-9" frameY="-2" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0011" x="939" y="4344" width="929" height="1436" frameX="-9" frameY="-6" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0012" x="1869" y="1447" width="915" height="1435" frameX="-9" frameY="-7" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0013" x="1881" y="5" width="906" height="1437" frameX="-9" frameY="-5" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0014" x="1881" y="5" width="906" height="1437" frameX="-9" frameY="-5" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0015" x="1873" y="4331" width="905" height="1438" frameX="-9" frameY="-4" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0016" x="1873" y="4331" width="905" height="1438" frameX="-9" frameY="-4" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0017" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0018" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0019" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0020" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0021" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0022" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0023" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0024" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0025" x="939" y="5785" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0026" x="5" y="5789" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0027" x="5" y="5789" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0028" x="1849" y="5785" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0029" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0030" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0031" x="939" y="5785" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0032" x="5" y="5789" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0033" x="5" y="5789" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0034" x="1849" y="5785" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0035" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0036" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0037" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0038" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0039" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0040" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0041" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0042" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0043" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0044" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0045" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0046" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0047" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0048" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0049" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0050" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0051" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+	<SubTexture name="Nonsense0052" x="1869" y="2887" width="905" height="1439" frameX="-9" frameY="-3" frameWidth="960" frameHeight="1442"/>
+</TextureAtlas>
