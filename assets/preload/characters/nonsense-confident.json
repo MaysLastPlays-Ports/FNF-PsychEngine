@@ -1,0 +1,84 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-19,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "eventshoot",
+			"indices": [],
+			"name": "Nonsense shoot gun"
+		},
+		{
+			"offsets": [
+				18,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "NoteDown confident"
+		},
+		{
+			"offsets": [
+				10,
+				-21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "NoteLeft Confident"
+		},
+		{
+			"offsets": [
+				7,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "NoteRight confident"
+		},
+		{
+			"offsets": [
+				0,
+				21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "NoteUp confident"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IdleConfident",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "NewNonsense Assets/ConfidentNonsense",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "nonsense",
+	"flip_x": false,
+	"camera_position": [
+		-50,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

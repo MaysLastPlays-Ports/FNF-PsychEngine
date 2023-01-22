@@ -1,0 +1,191 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-4,
+				-20
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "NoteLeft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				-61
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "NoteDown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				5,
+				16
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "NoteUp",
+			"indices": []
+		},
+		{
+			"offsets": [
+				4,
+				-11
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "NoteRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "Idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "Idle",
+			"indices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-14
+			],
+			"anim": "eventshoot",
+			"fps": 24,
+			"name": "Nonsense shoot gun",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				25,
+				-2
+			],
+			"anim": "eventsweat",
+			"fps": 24,
+			"name": "oh no",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-6
+			],
+			"anim": "eventbruh",
+			"fps": 24,
+			"name": "Bruh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-6
+			],
+			"anim": "eventlookatdis",
+			"fps": 24,
+			"name": "NHLookadis",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-21,
+				-6
+			],
+			"anim": "eventthinking",
+			"fps": 24,
+			"name": "NHTHinkLol",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				99,
+				-4
+			],
+			"anim": "eventshrug",
+			"fps": 24,
+			"name": "huh",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-21,
+				-6
+			],
+			"anim": "eventpringle",
+			"fps": 24,
+			"name": "NHEatingPringels",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "NewNonsense Assets/NewNonsense",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "nonsense",
+	"flip_x": false,
+	"camera_position": [
+		-50,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
