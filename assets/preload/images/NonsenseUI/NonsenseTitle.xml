@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="UI concepts.png">
+	<!-- Created with Adobe Animate version 19.1.0.349 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="TitleBop0000" x="5" y="5" width="1269" height="642"/>
+	<SubTexture name="TitleBop0001" x="5" y="5" width="1269" height="642"/>
+	<SubTexture name="TitleBop0002" x="1279" y="5" width="1219" height="617" frameX="-25" frameY="-12" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0003" x="1279" y="5" width="1219" height="617" frameX="-25" frameY="-12" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0004" x="2503" y="5" width="1234" height="625" frameX="-17" frameY="-8" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0005" x="2503" y="5" width="1234" height="625" frameX="-17" frameY="-8" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0006" x="5" y="652" width="1224" height="619" frameX="-22" frameY="-11" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0007" x="5" y="652" width="1224" height="619" frameX="-22" frameY="-11" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0008" x="1234" y="652" width="1218" height="617" frameX="-25" frameY="-12" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0009" x="1234" y="652" width="1218" height="617" frameX="-25" frameY="-12" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0010" x="2457" y="652" width="1215" height="615" frameX="-27" frameY="-13" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0011" x="2457" y="652" width="1215" height="615" frameX="-27" frameY="-13" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0012" x="5" y="1276" width="1214" height="614" frameX="-27" frameY="-14" frameWidth="1269" frameHeight="642"/>
+	<SubTexture name="TitleBop0013" x="5" y="1276" width="1214" height="614" frameX="-27" frameY="-14" frameWidth="1269" frameHeight="642"/>
+</TextureAtlas>
