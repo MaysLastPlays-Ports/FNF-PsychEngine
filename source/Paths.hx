@@ -30,6 +30,9 @@ class Paths
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
 	inline public static var VIDEO_EXT = "mp4";
 
+	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = ["textures" => [], "graphics" => [], "sounds" => []];
+	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
+
 	#if MODS_ALLOWED
 	public static var ignoreModFolders:Array<String> = [
 		'characters',
@@ -61,10 +64,6 @@ class Paths
 		'assets/shared/music/breakfast.$SOUND_EXT',
 		'assets/shared/music/tea-time.$SOUND_EXT',
 	];
-
-	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = ["textures" => [], "graphics" => [], "sounds" => []];
-	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
-
 	// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory():Void
 	{
@@ -428,6 +427,7 @@ class Paths
 		return null;
 	}
 
+	public static var currentTrackedSounds:Map<String, Sound> = [];
 	public static function returnSound(path:String, key:String, ?library:String)
 	{
 		#if MODS_ALLOWED
@@ -454,36 +454,6 @@ class Paths
 
 		FlxG.log.error('oh no $file is returning null NOOOO');
 		return null;
-	}
-	public static var currentTrackedSounds:Map<String, Sound> = [];
-	public static function returnSound(path:String, key:String, ?library:String) {
-		#if MODS_ALLOWED
-		var file:String = modsSounds(path, key);
-		if(FileSystem.exists(file)) {
-			if(!currentTrackedSounds.exists(file)) {
-				currentTrackedSounds.set(file, Sound.fromFile(file));
-			}
-			localTrackedAssets.push(key);
-			return currentTrackedSounds.get(file);
-		}
-		#end
-		// I hate this so god damn much
-		var gottenPath:String = SUtil.getPath() + getPath('$path/$key.$SOUND_EXT', SOUND, library);
-		gottenPath = gottenPath.substring(gottenPath.indexOf(':') + 1, gottenPath.length);
-		// trace(gottenPath);
-		if(!currentTrackedSounds.exists(gottenPath))
-		#if MODS_ALLOWED
-			currentTrackedSounds.set(gottenPath, Sound.fromFile(gottenPath));
-		#else
-		{
-			var folder:String = '';
-			if(path == 'songs') folder = 'songs:';
-
-			currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(folder + getPath('$path/$key.$SOUND_EXT', SOUND, library)));
-		}
-		#end
-		localTrackedAssets.push(gottenPath);
-		return currentTrackedSounds.get(gottenPath);
 	}
 
 	#if MODS_ALLOWED
