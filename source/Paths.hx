@@ -61,11 +61,9 @@ class Paths
 		'assets/shared/music/breakfast.$SOUND_EXT',
 		'assets/shared/music/tea-time.$SOUND_EXT',
 	];
-	/// haya I love you for the base cache dump I took to the max
-	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
-	public static var currentTrackedAssets:Map<String, FlxGraphic> = [];
 
-	//ALL THE MEMORY CODE SHIT IS PROBABLY BY SAW IDFK LMFAO
+	private static var currentTrackedAssets:Map<String, Map<String, Dynamic>> = ["textures" => [], "graphics" => [], "sounds" => []];
+	private static var localTrackedAssets:Map<String, Array<String>> = ["graphics" => [], "sounds" => []];
 
 	// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory():Void
@@ -131,6 +129,7 @@ class Paths
 
 		localTrackedAssets["sounds"] = localTrackedAssets["graphics"] = [];
 	}
+
 	static public var currentModDirectory:String = '';
 	static public var currentLevel:String;
 	static public function setCurrentLevel(name:String)
@@ -358,8 +357,7 @@ class Paths
 		return hideChars.split(path).join("").toLowerCase();
 	}
 
-	// completely rewritten asset loading? fuck!
-	public static function returnGraphic(key:String, ?library:String, ?useGL:Bool = true)
+	public static function returnGraphic(key:String, ?library:String, ?useGL:Bool = false)
 	{
 		#if MODS_ALLOWED
 		var path:String = modsImages(key);
