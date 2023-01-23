@@ -72,14 +72,14 @@ class FlxVirtualPad extends FlxSpriteGroup {
 		buttonDown2 = new FlxButton(0, 0);
 
 		switch (DPad){
-			case UP_DOWN:
-				dPad.add(add(buttonUp = createButton(0, FlxG.height - 85 * 3, 44 * 3, 45 * 3, "up")));
-				dPad.add(add(buttonDown = createButton(0, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "down")));
-			case CHARTEDITOR:
+			case CHART_EDITOR:
 				dPad.add(add(buttonUp = createButton(0, FlxG.height - 85 * 3, 44 * 3, 45 * 3, "up")));
 				dPad.add(add(buttonDown = createButton(0, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "down")));
 				dPad.add(add(buttonLeft = createButton(42 * 3, FlxG.height - 85 * 3, 44 * 3, 45 * 3, "left")));
 				dPad.add(add(buttonRight = createButton(42 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "right")));
+			case UP_DOWN:
+				dPad.add(add(buttonUp = createButton(0, FlxG.height - 85 * 3, 44 * 3, 45 * 3, "up")));
+				dPad.add(add(buttonDown = createButton(0, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "down")));
 			case LEFT_RIGHT:
 				dPad.add(add(buttonLeft = createButton(0, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "left")));
 				dPad.add(add(buttonRight = createButton(42 * 3, FlxG.height - 45 * 3, 44 * 3, 45 * 3, "right")));
@@ -210,6 +210,7 @@ class FlxVirtualPad extends FlxSpriteGroup {
 }
 
 enum FlxDPadMode {
+	CHART_EDITOR;
 	UP_DOWN;
 	LEFT_RIGHT;
 	UP_LEFT_RIGHT;
