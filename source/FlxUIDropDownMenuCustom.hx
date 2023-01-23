@@ -7,7 +7,9 @@ import flixel.addons.ui.interfaces.IHasParams;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.math.FlxMath;
+#if android
 import flixel.ui.FlxButton;
+#end
 import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxStringUtil;
@@ -22,14 +24,11 @@ import flixel.addons.ui.FlxUI;
 
 
 /*
-
 THIS IS AN EDIT OF FlxUIDropDownMenu I'VE MADE BECAUSE I'M TIRED OF IT NOT SUPPORTING SCROLLING UP/DOWN
 BAH!
-
 The differences are the following:
 * Support to scrolling up/down with mouse wheel or arrow keys
 * THe default drop direction is "Down" instead of "Automatic"
-
 */
 
 
@@ -433,14 +432,44 @@ class FlxUIDropDownMenuCustom extends FlxUIGroup implements IFlxUIWidget impleme
 		#if FLX_MOUSE
 		if (dropPanel.visible)
 		{
-			if(list.length > 1 && canScroll) {
-				if(FlxG.mouse.wheel > 0 || FlxG.keys.justPressed.UP) {
+			#if android //thanks gamerbross -saw
+			if(list.length > 1 && canScroll) 
+			{
+				for (swipe in FlxG.swipes)
+				{
+					var f = swipe.startPosition.x - swipe.endPosition.x;
+					var g = swipe.startPosition.y - swipe.endPosition.y;
+					if (25 <= Math.sqrt(f * f + g * g))
+					{
+						if ((-45 <= swipe.startPosition.angleBetween(swipe.endPosition) && 45 >= swipe.startPosition.angleBetween(swipe.endPosition)))
+						{
+							// Go down
+							currentScroll++;
+							if(currentScroll >= list.length) currentScroll = list.length-1;
+							updateButtonPositions();
+						}
+						else if (-180 <= swipe.startPosition.angleBetween(swipe.endPosition) && -135 >= swipe.startPosition.angleBetween(swipe.endPosition) || (135 <= swipe.startPosition.angleBetween(swipe.endPosition) && 180 >= swipe.startPosition.angleBetween(swipe.endPosition)))
+						{
+							// Go up
+							--currentScroll;
+							if(currentScroll < 0) currentScroll = 0;
+							updateButtonPositions();
+						}
+					}
+				}
+			}
+			#else
+			if(list.length > 1 && canScroll) 
+			{
+				if(FlxG.mouse.wheel > 0 || FlxG.keys.justPressed.UP) 
+				{
 					// Go up
 					--currentScroll;
 					if(currentScroll < 0) currentScroll = 0;
 					updateButtonPositions();
 				}
-				else if (FlxG.mouse.wheel < 0 || FlxG.keys.justPressed.DOWN) {
+				else if (FlxG.mouse.wheel < 0 || FlxG.keys.justPressed.DOWN) 
+				{
 					// Go down
 					currentScroll++;
 					if(currentScroll >= list.length) currentScroll = list.length-1;
@@ -448,26 +477,14 @@ class FlxUIDropDownMenuCustom extends FlxUIGroup implements IFlxUIWidget impleme
 				}
 			}
 
-			if (FlxG.mouse.justPressed && !mouseOverlapping())
+			if (FlxG.mouse.justPressed && !FlxG.mouse.overlaps(this))
 			{
 				showList(false);
 			}
+			#end
 		}
 		#end
 	}
-
-	function mouseOverlapping()
-	{
-		var mousePoint = FlxG.mouse.getScreenPosition(camera);
-		var objPoint = this.getScreenPosition(null, camera);
-		if(mousePoint.x >= objPoint.x && mousePoint.y >= objPoint.y &&
-			mousePoint.x < objPoint.x + this.width && mousePoint.y < objPoint.y + this.height)
-		{
-			return true;
-		}
-		return false;
-	}
-
 	override public function destroy():Void
 	{
 		super.destroy();
