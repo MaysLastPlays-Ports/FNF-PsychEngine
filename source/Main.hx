@@ -53,8 +53,7 @@ class Main extends Sprite
 	{
 		super();
 
-        SUtil.gameCrashCheck();
-
+    SUtil.gameCrashCheck();
 		if (stage != null)
 		{
 			init();
@@ -93,6 +92,13 @@ class Main extends Sprite
 	
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
+
+		cpp.NativeGc.enable(true);
+		cpp.NativeGc.run(true);
+		FlxG.signals.preStateSwitch.add(function()
+		{
+			cpp.vm.Gc.run(true);
+		});
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
