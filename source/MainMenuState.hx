@@ -214,11 +214,12 @@ class MainMenuState extends MusicBeatState
 					var _touch:Bool = FlxG.touches.getFirst().overlaps(spr, camera);
 					if (_touch)
 					{
-						if (curSelected != spr.ID)
+						if (curSelected != spr.ID) {
 							curSelected = spr.ID;
 							changeItem();
-						else
+						} else {
 							goTo = true;
+						}
 					}
 					touch = _touch || touch;
 				}
@@ -286,6 +287,7 @@ class MainMenuState extends MusicBeatState
 				}
 				#if mobile
 				goTo = false;
+				#end
 			}
 			#if (desktop || android)
 			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonD.justPressed #end)
