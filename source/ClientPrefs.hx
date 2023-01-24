@@ -221,6 +221,9 @@ class ClientPrefs {
 		if(FlxG.save.data.controlsTransparency != null) {
 			controlsTransparency = FlxG.save.data.controlsTransparency;
 		}
+		if(FlxG.save.data.healthBarAlpha != null) {
+			healthBarAlpha = FlxG.save.data.healthBarAlpha;
+		}
 		if(FlxG.save.data.comboOffset != null) {
 			comboOffset = FlxG.save.data.comboOffset;
 		}
