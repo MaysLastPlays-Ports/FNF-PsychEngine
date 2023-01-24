@@ -31,6 +31,10 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
+
+	#if mobile
+	var goTo:Bool = false;
+	#end
 	
 	var optionShit:Array<String> = [
 		'story_mode',
@@ -160,7 +164,7 @@ class MainMenuState extends MusicBeatState
 		#end
 
 		#if android
-		addVirtualPad(UP_DOWN, A_B_E);
+		addVirtualPad(NONE, D);
 		#end
 
 		super.create();
@@ -202,6 +206,25 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
+			#if mobile
+			menuItems.forEach(function(spr:FlxSprite)
+			{
+				if (FlxG.touches.justStarted().length > 0)
+				{
+					var _touch:Bool = FlxG.touches.getFirst().overlaps(spr, camera);
+					if (_touch)
+					{
+						if (curSelected != spr.ID)
+							curSelected = spr.ID;
+							changeItem();
+						else
+							goTo = true;
+					}
+					touch = _touch || touch;
+				}
+			});
+			#end
+
 			if (controls.BACK)
 			{
 				selectedSomethin = true;
@@ -209,7 +232,7 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new TitleState());
 			}
 
-			if (controls.ACCEPT)
+			if (#if mobile goTo #else controls.ACCEPT #end)
 			{
 				if (optionShit[curSelected] == 'donate')
 				{
@@ -261,9 +284,11 @@ class MainMenuState extends MusicBeatState
 						}
 					});
 				}
+				#if mobile
+				goTo = false;
 			}
 			#if (desktop || android)
-			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonE.justPressed #end)
+			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonD.justPressed #end)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());

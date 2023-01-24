@@ -82,6 +82,7 @@ class MusicBeatState extends FlxUIState
 
 		var camcontrol = new flixel.FlxCamera();
 		FlxG.cameras.add(camcontrol, false);
+		camcontrol.alpha = ClientPrefs.controlsTransparency;
 		camcontrol.bgColor.alpha = 0;
 		androidc.cameras = [camcontrol];
 
@@ -92,9 +93,10 @@ class MusicBeatState extends FlxUIState
 	#end
 
 	#if android
-        public function addPadCamera() {
+  public function addPadCamera() {
 		var camcontrol = new flixel.FlxCamera();
 		camcontrol.bgColor.alpha = 0;
+		camcontrol.alpha = ClientPrefs.controlsTransparency;
 		FlxG.cameras.add(camcontrol, false);
 		_virtualpad.cameras = [camcontrol];
 	}
