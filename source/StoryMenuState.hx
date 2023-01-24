@@ -213,6 +213,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			var upP = controls.UI_UP_P;
 			var downP = controls.UI_DOWN_P;
+			var touch:Bool = false;
+
 			if (upP)
 			{
 				changeWeek(-1);
@@ -225,6 +227,27 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
+			#if mobile
+			grpWeekText.forEach(function(spr:FlxSprite)
+			{
+				if (FlxG.touches.justStarted().length > 0)
+				{
+					var _touch:Bool = FlxG.touches.getFirst().overlaps(spr, camera);
+					if (_touch)
+					{
+						if (curWeek != spr.ID) {
+							curWeek = spr.ID;
+							changeWeek();
+							changeDifficulty();
+						} else {
+							selectWeek();
+						}
+					}
+					touch = _touch || touch;
+				}
+			});
+			#end
+
 			if(FlxG.mouse.wheel != 0)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
@@ -232,22 +255,29 @@ class StoryMenuState extends MusicBeatState
 				changeDifficulty();
 			}
 
-			if (controls.UI_RIGHT)
+			#if mobile
+			if (FlxG.touches.justStarted().length > 0)
+			{
+			#end
+			if (#if mobile FlxG.touches.getFirst().overlaps(rightArrow, camera) #else controls.UI_RIGHT #end)
 				rightArrow.animation.play('press')
 			else
 				rightArrow.animation.play('idle');
 
-			if (controls.UI_LEFT)
+			if (#if mobile FlxG.touches.getFirst().overlaps(leftArrow, camera) #else controls.UI_LEFT #end)
 				leftArrow.animation.play('press');
 			else
 				leftArrow.animation.play('idle');
 
-			if (controls.UI_RIGHT_P)
+			if (#if mobile FlxG.touches.getFirst().overlaps(rightArrow, camera) #else controls.UI_RIGHT_P #end)
 				changeDifficulty(1);
-			else if (controls.UI_LEFT_P)
+			else if (#if mobile FlxG.touches.getFirst().overlaps(leftArrow, camera) #else controls.UI_LEFT_P #end)
 				changeDifficulty(-1);
 			else if (upP || downP)
 				changeDifficulty();
+			#if mobile
+			}
+			#end
 
 			if(FlxG.keys.justPressed.CONTROL #if android || _virtualpad.buttonX.justPressed #end)
 			{
