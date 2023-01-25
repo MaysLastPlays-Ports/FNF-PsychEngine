@@ -392,7 +392,7 @@ class ChartingState extends MusicBeatState
 		updateGrid();
 
 		#if android
-		addVirtualPad(FULL, A_B_X_Y);
+		addVirtualPad(CHART_EDITOR, A_B_C_X_Y_Z);
 		#end
 
 		super.create();
@@ -1713,17 +1713,17 @@ class ChartingState extends MusicBeatState
 				return;
 			}
 
-			if(FlxG.keys.justPressed.Z && FlxG.keys.pressed.CONTROL) {
+			if((FlxG.keys.justPressed.Z || _virtualpad.buttonZ.justPressed) && FlxG.keys.pressed.CONTROL) {
 				undo();
 			}
 
 
 
-			if(FlxG.keys.justPressed.Z && curZoom > 0 && !FlxG.keys.pressed.CONTROL) {
+			if((FlxG.keys.justPressed.Z || _virtualpad.buttonZ.justPressed) && curZoom > 0 && !FlxG.keys.pressed.CONTROL) {
 				--curZoom;
 				updateZoom();
 			}
-			if(FlxG.keys.justPressed.X && curZoom < zoomList.length-1) {
+			if((FlxG.keys.justPressed.X || _virtualpad.buttonC.justPressed) && curZoom < zoomList.length-1) {
 				curZoom++;
 				updateZoom();
 			}
@@ -1855,7 +1855,7 @@ class ChartingState extends MusicBeatState
 			//AWW YOU MADE IT SEXY <3333 THX SHADMAR
 
 			if(!blockInput){
-				if(FlxG.keys.justPressed.RIGHT #if android || _virtualpad.buttonRight.justPressed #end){
+				if(FlxG.keys.justPressed.RIGHT){
 					curQuant++;
 					if(curQuant>quantizations.length-1)
 						curQuant = 0;
@@ -1863,7 +1863,7 @@ class ChartingState extends MusicBeatState
 					quantization = quantizations[curQuant];
 				}
 
-				if(FlxG.keys.justPressed.LEFT #if android || _virtualpad.buttonLeft.justPressed #end){
+				if(FlxG.keys.justPressed.LEFT){
 					curQuant--;
 					if(curQuant<0)
 						curQuant = quantizations.length-1;

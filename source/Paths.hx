@@ -109,7 +109,7 @@ class Paths
 		}
 		// flags everything to be cleared out next unused memory clear
 		localTrackedAssets = [];
-		#if !html5 openfl.Assets.cache.clear("songs"); #end
+		openfl.Assets.cache.clear("songs");
 	}
 
 	static public var currentModDirectory:String = '';
@@ -220,24 +220,16 @@ class Paths
 
 	inline static public function voices(song:String):Any
 	{
-		#if html5
-		return 'songs:assets/songs/${formatToSongPath(song)}/Voices.$SOUND_EXT';
-		#else
 		var songKey:String = '${formatToSongPath(song)}/Voices';
 		var voices = returnSound('songs', songKey);
 		return voices;
-		#end
 	}
 
 	inline static public function inst(song:String):Any
 	{
-		#if html5
-		return 'songs:assets/songs/${formatToSongPath(song)}/Inst.$SOUND_EXT';
-		#else
 		var songKey:String = '${formatToSongPath(song)}/Inst';
 		var inst = returnSound('songs', songKey);
 		return inst;
-		#end
 	}
 
 	inline static public function image(key:String, ?library:String):FlxGraphic
@@ -249,11 +241,9 @@ class Paths
 
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
-		#if sys
 		#if MODS_ALLOWED
 		if (!ignoreMods && FileSystem.exists(modFolders(key)))
 			return File.getContent(modFolders(key));
-		#end
 
 		if (FileSystem.exists(SUtil.getPath() + getPreloadPath(key)))
 			return File.getContent(SUtil.getPath() + getPreloadPath(key));
@@ -474,7 +464,7 @@ class Paths
 	static public function pushGlobalMods() // prob a better way to do this but idc
 	{
 		globalMods = [];
-		var path:String = 'modsList.txt';
+		var path:String = SUtil.getPath() + 'modsList.txt';
 		if(FileSystem.exists(path))
 		{
 			var list:Array<String> = CoolUtil.coolTextFile(path);

@@ -52,8 +52,8 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		//Paths.clearStoredMemory();
-		//Paths.clearUnusedMemory();
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -78,6 +78,7 @@ class FreeplayState extends MusicBeatState
 			}
 
 			WeekData.setDirectoryFromWeek(leWeek);
+
 			for (song in leWeek.songs)
 			{
 				var colors:Array<Int> = song[2];
