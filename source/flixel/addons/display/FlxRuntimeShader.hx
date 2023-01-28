@@ -1,6 +1,6 @@
 package flixel.addons.display;
 
-import FlxShader;
+import flixel.system.FlxAssets.FlxShader;
 import lime.utils.Float32Array;
 import openfl.display.BitmapData;
 import openfl.display.ShaderInput;
@@ -113,7 +113,7 @@ class FlxRuntimeShader extends FlxShader
 	;
 	#end
 	static final BASE_FRAGMENT_BODY:String = "
-		vec4 color = texture2D (bitmap, openfl_TextureCoordv);
+		vec4 color = texture2D(bitmap, openfl_TextureCoordv);
 		if (color.a == 0.0) {
 			gl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);
 		} else if (openfl_HasColorTransform) {
