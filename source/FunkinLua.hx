@@ -459,7 +459,7 @@ class FunkinLua {
 			if(value != null && value.bitmap != null)
 			{
 				// trace('Found bitmapdata. Width: ${value.bitmap.width} Height: ${value.bitmap.height}');
-				shader.setBitmapData(prop, value.bitmap);
+				shader.setSampler2D(prop, value.bitmap);
 			}
 			#else
 			luaTrace("setShaderSampler2D: Platform unsupported for Runtime Shaders!", false, false, FlxColor.RED);

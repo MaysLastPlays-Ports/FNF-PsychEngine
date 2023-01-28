@@ -46,7 +46,7 @@ haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-a
 
 haxelib remove hxCodec
 
-haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-old.git
+haxelib git hxCodec https://github.com/MAJigsaw77/hxCodec.git
 
 haxelib remove linc_luajit
 
