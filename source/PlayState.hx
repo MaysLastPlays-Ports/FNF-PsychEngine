@@ -1437,16 +1437,16 @@ class PlayState extends MusicBeatState
 				var frag:String = folder + name + '.frag';
 				var vert:String = folder + name + '.vert';
 				var found:Bool = false;
-				if(FileSystem.exists(SUtil.getPath() + frag))
+				if(FileSystem.exists(frag))
 				{
-					frag = File.getContent(SUtil.getPath() + frag);
+					frag = File.getContent(frag);
 					found = true;
 				}
 				else frag = null;
 
-				if (FileSystem.exists(SUtil.getPath() + vert))
+				if (FileSystem.exists(vert))
 				{
-					vert = File.getContent(SUtil.getPath() + vert);
+					vert = File.getContent(vert);
 					found = true;
 				}
 				else vert = null;
