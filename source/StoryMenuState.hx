@@ -51,8 +51,6 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
-		transIn = FlxTransitionableState.defaultTransIn;
-		transOut = FlxTransitionableState.defaultTransOut;
 
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
@@ -190,7 +188,6 @@ class StoryMenuState extends MusicBeatState
 
                 #if android
                 addVirtualPad(FULL, A_B_X_Y);
-                addPadCamera();
                 #end
 
 		super.create();
