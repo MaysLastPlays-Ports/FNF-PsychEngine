@@ -100,7 +100,7 @@ class FPS extends TextField
 			{
 			text += "\nSystem: " + '${lime.system.System.platformLabel} ${lime.system.System.platformVersion}';
       text += "\nGL Render: " + '${getGLInfo(RENDERER)}';
-      text += "\nGLShading Version: " + '${getGLInfo(SHADING_LANGUAGE_VERSION)})';
+      text += "\nGLShading Version: " + '${getGLInfo(SHADING_LANGUAGE_VERSION)}';
 			}
 			#end
 
