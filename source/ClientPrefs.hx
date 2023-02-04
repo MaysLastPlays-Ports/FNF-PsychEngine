@@ -162,9 +162,6 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.GLRender != null) {
 			GLRender = FlxG.save.data.GLRender;
-			if(Main.fpsVar != null) {
-				Main.fpsVar.visible = GLRender;
-			}
 		}
 		if(FlxG.save.data.flashing != null) {
 			flashing = FlxG.save.data.flashing;
