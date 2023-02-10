@@ -290,9 +290,9 @@ class FlxRuntimeShader extends FlxShader
 			var precisionHeaders = buildPrecisionHeaders();
 
 			var vertex = StringTools.replace(glVertexSource, PRAGMA_PRECISION, precisionHeaders);
-			vertex = StringTools.replace(vertex, PRAGMA_VERSION, versionHeader);
+			vertex = StringTools.replace(vertex, PRAGMA_VERSION);
 			var fragment = StringTools.replace(glFragmentSource, PRAGMA_PRECISION, precisionHeaders);
-			fragment = StringTools.replace(fragment, PRAGMA_VERSION, versionHeader);
+			fragment = StringTools.replace(fragment, PRAGMA_VERSION);
 			
 			var id = vertex + fragment;
 
