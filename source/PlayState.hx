@@ -1413,7 +1413,7 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	public function initLuaShader(name:String, ?glslesVersion:Int = 320 es)
+	public function initLuaShader(name:String, ?glslesVersion:Int = 320es)
 	{
 		if(!ClientPrefs.shaders) return false;
 
