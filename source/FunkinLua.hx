@@ -2872,7 +2872,7 @@ class FunkinLua {
 	}
 	#end
 	
-	function initLuaShader(name:String, ?glslesVersion:Int = 320 es)
+	function initLuaShader(name:String, ?glslesVersion:Int = 320es)
 	{
 		if(!ClientPrefs.shaders) return false;
 
