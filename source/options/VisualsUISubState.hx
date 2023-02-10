@@ -96,14 +96,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 		option.onChange = onChangeFPSCounter;
-	
-		var option:Option = new Option('GL Render',
-			'Do You Want To Use GL Render?',
-			'GLRender',
-			'bool',
-			false);
-		addOption(option);	
-		
+
 		var option:Option = new Option('Pause Screen Song:',
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
