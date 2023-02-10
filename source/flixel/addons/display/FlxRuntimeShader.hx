@@ -188,7 +188,7 @@ class FlxRuntimeShader extends FlxShader
 	static final PRAGMA_PRECISION:String = "#pragma precision";
 	static final PRAGMA_VERSION:String = "#pragma version";
 
-	private var _glslVersion:Int;
+	private var _glslVersion:String;
 
 	/**
 	 * Constructs a GLSL shader.
@@ -196,7 +196,7 @@ class FlxRuntimeShader extends FlxShader
 	 * @param vertexSource The vertex shader source.
 	 * Note you also need to `initialize()` the shader MANUALLY! It can't be done automatically.
 	 */
-	public function new(fragmentSource:String = null, vertexSource:String = null, glslVersion:Int = 120es):Void
+	public function new(fragmentSource:String = null, vertexSource:String = null, glslVersion:String = 120es):Void
 	{
 		_glslVersion = glslVersion;
 
