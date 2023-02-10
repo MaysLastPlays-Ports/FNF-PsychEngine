@@ -188,14 +188,17 @@ class FlxRuntimeShader extends FlxShader
 	static final PRAGMA_PRECISION:String = "#pragma precision";
 	static final PRAGMA_VERSION:String = "#pragma version";
 
+	private var _glslesVersion:Int;
+
 	/**
 	 * Constructs a GLSL shader.
 	 * @param fragmentSource The fragment shader source.
 	 * @param vertexSource The vertex shader source.
 	 * Note you also need to `initialize()` the shader MANUALLY! It can't be done automatically.
 	 */
-	public function new(fragmentSource:String = null, vertexSource:String = null):Void
+	public function new(fragmentSource:String = null, vertexSource:String = null, glslesVersion:Int = 100):Void
 	{
+		_glslesVersion = glslesVersion;
 
 		if (fragmentSource == null)
 		{
@@ -288,11 +291,12 @@ class FlxRuntimeShader extends FlxShader
 			var gl = __context.gl;
 
 			var precisionHeaders = buildPrecisionHeaders();
+			var versionHeader = '#version ${_glslesVersion}\n';
 
 			var vertex = StringTools.replace(glVertexSource, PRAGMA_PRECISION, precisionHeaders);
-			vertex = StringTools.replace(vertex, PRAGMA_VERSION);
+			vertex = StringTools.replace(vertex, PRAGMA_VERSION, versionHeader);
 			var fragment = StringTools.replace(glFragmentSource, PRAGMA_PRECISION, precisionHeaders);
-			fragment = StringTools.replace(fragment, PRAGMA_VERSION);
+			fragment = StringTools.replace(fragment, PRAGMA_VERSION, versionHeader);
 			
 			var id = vertex + fragment;
 
