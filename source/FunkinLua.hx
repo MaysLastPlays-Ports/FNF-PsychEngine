@@ -256,7 +256,7 @@ class FunkinLua {
 		});
 
 		// shader shit
-		Lua_helper.add_callback(lua, "initLuaShader", function(name:String, glslesVersion:Int = 100) {
+		Lua_helper.add_callback(lua, "initLuaShader", function(name:String, glslesVersion:Int = 300) {
 			if(!ClientPrefs.shaders) return false;
 
 			#if (!flash && MODS_ALLOWED && sys)
@@ -2872,7 +2872,7 @@ class FunkinLua {
 	}
 	#end
 	
-	function initLuaShader(name:String, ?glslesVersion:Int = 100)
+	function initLuaShader(name:String, ?glslesVersion:Int = 300)
 	{
 		if(!ClientPrefs.shaders) return false;
 
