@@ -196,7 +196,7 @@ class FlxRuntimeShader extends FlxShader
 	 * @param vertexSource The vertex shader source.
 	 * Note you also need to `initialize()` the shader MANUALLY! It can't be done automatically.
 	 */
-	public function new(fragmentSource:String = null, vertexSource:String = null, glslVersion:String = 120es):Void
+	public function new(fragmentSource:String = null, vertexSource:String = null, glslVersion:String = 100es):Void
 	{
 		_glslVersion = glslVersion;
 
