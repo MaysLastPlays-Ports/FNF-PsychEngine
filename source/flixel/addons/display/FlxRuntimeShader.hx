@@ -198,7 +198,6 @@ class FlxRuntimeShader extends FlxShader
 	 */
 	public function new(fragmentSource:String = null, vertexSource:String = null):Void
 	{
-		_glslesVersion = glslesVersion;
 
 		if (fragmentSource == null)
 		{
