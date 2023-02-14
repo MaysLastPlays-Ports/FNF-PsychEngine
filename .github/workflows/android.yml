@@ -1,0 +1,174 @@
+name: Android Build CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-armv7-and-arm64:
+    name: Android
+    runs-on: ubuntu-${{ matrix.version }}
+    strategy:
+      matrix:
+        arch: [arm64, armv7]
+        build: [release]
+        version: [20.04]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@main
+        id: setup-ndk
+        with:
+          ndk-version: r21e
+      - name: Setup Java JDK
+        uses: actions/setup-java@main
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@main
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+      - name: Install Haxelib
+        run: |
+          haxelib setup ~/haxelib
+          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
+          haxelib git lime https://github.com/mcagabe19/lime.git
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never git flixel https://github.com/mcagabe19/flixel-4.11.0.git
+          haxelib install flixel-tools --quiet 
+          haxelib install flixel-ui --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
+          haxelib install hscript --quiet
+          haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-old.git
+          haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
+      - name: Setup Lime
+        run: |
+          haxelib run lime setup -alias -y
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME
+          haxelib run lime config ANDROID_SETUP true
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+      - name: Compile
+        run: haxelib run lime build android -${{ matrix.arch }} -${{ matrix.build }}
+      - name: Publish Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
+  build-armv6:
+    name: Android
+    runs-on: ubuntu-${{ matrix.version }}
+    strategy:
+      matrix:
+        arch: [armv6]
+        build: [release]
+        version: [20.04]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@main
+        id: setup-ndk
+        with:
+          ndk-version: r11c
+      - name: Setup Java JDK
+        uses: actions/setup-java@main
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@main
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+      - name: Install Haxelib
+        run: |
+          haxelib setup ~/haxelib
+          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
+          haxelib git lime https://github.com/mcagabe19/lime.git
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never git flixel https://github.com/mcagabe19/flixel-4.11.0.git
+          haxelib install flixel-tools --quiet 
+          haxelib install flixel-ui --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
+          haxelib install hscript --quiet
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
+      - name: Setup Lime
+        run: |
+          haxelib run lime setup -alias -y
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME
+          haxelib run lime config ANDROID_SETUP true
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+      - name: Compile
+        run: haxelib run lime build android -D nolua -D nohxcodec -${{ matrix.arch }} -${{ matrix.build }}
+      - name: Publish Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
+  build-x86-and-x86_64:
+    name: Android
+    runs-on: ubuntu-${{ matrix.version }}
+    strategy:
+      matrix:
+        arch: [32, 64]
+        build: [release]
+        version: [20.04]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@main
+        id: setup-ndk
+        with:
+          ndk-version: r21e
+      - name: Setup Java JDK
+        uses: actions/setup-java@main
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@main
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+      - name: Install Haxelib
+        run: |
+          haxelib setup ~/haxelib
+          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
+          haxelib git lime https://github.com/mcagabe19/lime.git
+          haxelib install openfl 9.1.0 --quiet
+          haxelib --never git flixel https://github.com/mcagabe19/flixel-4.11.0.git
+          haxelib install flixel-tools --quiet 
+          haxelib install flixel-ui --quiet
+          haxelib install flixel-addons 2.11.0 --quiet
+          haxelib install hscript --quiet
+          haxelib git linc_luajit https://github.com/mcagabe19/linc_luajit.git
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
+      - name: Setup Lime
+        run: |
+          haxelib run lime setup -alias -y
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
+          haxelib run lime config JAVA_HOME $JAVA_HOME
+          haxelib run lime config ANDROID_SETUP true
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+      - name: Compile
+        run: haxelib run lime build android -D nohxcodec -${{ matrix.arch }} -${{ matrix.build }}
+      - name: Publish Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
