@@ -39,7 +39,6 @@ import openfl.Assets;
 using StringTools;
 typedef TitleData =
 {
-
 	titlex:Float,
 	titley:Float,
 	startx:Float,
@@ -86,7 +85,6 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-
 		#if android
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
@@ -139,7 +137,7 @@ class TitleState extends MusicBeatState
 		#if CHECK_FOR_UPDATES
 		if(ClientPrefs.checkForUpdates && !closedState) {
 			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/MaysLastPlayGithub/FNF-PsychEngine/main/gitVersion.txt");
+			var http = new haxe.Http("https://raw.githubusercontent.com/mcagabe19/FNF-PsychEngine-Custom/main/gitVersion.txt");
 
 			http.onData = function (data:String)
 			{
