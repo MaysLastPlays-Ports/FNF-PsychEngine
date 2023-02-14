@@ -14,4 +14,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: The Shits
-        run: echo $GITHUB_SHA > ./gitVersion.txt && git config --local user.email "actions@github.com" && git config --local user.name "AutoRun" && git add . && git commit -m "Runned Formatter" || true && git push -u origin main
+        run: echo $GITHUB_SHA > ./gitVersion.txt && git config --local user.email "actions@github.com" && git config --local user.name "Github Actions" && git add . && git commit -m "AutoRun" || true && git push -u origin main
