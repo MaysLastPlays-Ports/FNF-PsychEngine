@@ -59,7 +59,7 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@main
         with:
-          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          name: build-${{ matrix.arch }}-${{ matrix.build }}
           path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
   build-armv6:
     name: Android
@@ -114,7 +114,7 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@main
         with:
-          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          name: build-${{ matrix.arch }}-${{ matrix.build }}
           path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
   build-x86-and-x86_64:
     name: Android
@@ -170,5 +170,5 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@main
         with:
-          name: build-ubuntu${{ matrix.version }}-${{ matrix.arch }}-${{ matrix.build }}
+          name: build-${{ matrix.arch }}-${{ matrix.build }}
           path: 'export/release/android/bin/app/build/outputs/apk/debug/*.apk'
