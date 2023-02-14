@@ -1,0 +1,13 @@
+name: Version Changer
+
+on:
+  push:
+
+jobs:
+  Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: The Shits
+        run: echo $GITHUB_SHA > ./gitVersion.txt && git config --local user.email "actions@github.com" && git config --local user.name "GitHub Actions" && git add . && git commit -m "Runned Formatter" || true && git push -u origin master
