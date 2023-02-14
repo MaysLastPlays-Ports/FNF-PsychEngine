@@ -4,7 +4,7 @@ import flixel.FlxG;
 import flixel.group.FlxSpriteGroup;
 import openfl.display.BitmapData;
 import openfl.display.Shape;
-import mobile.flixel.FlxButton;
+import android.flixel.FlxButton;
 
 /**
  * A zone with 4 hint's (A hitbox).
