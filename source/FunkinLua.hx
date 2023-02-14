@@ -32,10 +32,10 @@ import openfl.utils.Assets;
 import flixel.math.FlxMath;
 import flixel.util.FlxSave;
 import flixel.addons.transition.FlxTransitionableState;
-import flixel.system.FlxAssets.FlxShader;
+import FlxShader;
 
 #if (!flash && sys)
-import flixel.addons.display.FlxRuntimeShader;
+import FlxRuntimeShader;
 #end
 
 #if sys
