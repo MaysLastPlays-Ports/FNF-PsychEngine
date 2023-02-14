@@ -5,6 +5,8 @@ permissions: write-all
 on:
   push:
 
+  workflow_dispatch:
+
 jobs:
   Job:
     runs-on: ubuntu-latest
