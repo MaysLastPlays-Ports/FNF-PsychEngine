@@ -20,8 +20,8 @@ import sys.FileSystem;
 import flixel.graphics.FlxGraphic;
 import openfl.display.BitmapData;
 import haxe.Json;
-
 import flash.media.Sound;
+import openfl.display3D.textures.Texture;
 
 using StringTools;
 
