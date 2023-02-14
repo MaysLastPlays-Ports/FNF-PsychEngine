@@ -1,5 +1,7 @@
 name: Version Changer
 
+permissions: write-all
+
 on:
   push:
 
