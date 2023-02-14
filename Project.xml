@@ -146,6 +146,9 @@
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
 
+        <!-- Shader Shit -->
+        <haxelib name="HxShaders"/>
+
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
 
@@ -183,6 +186,11 @@
 
 	<!--Enable this for Nape release builds for a serious peformance improvement-->
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
+
+        <!--Dependency's for opengl and HxShaders--> 
+<dependency name="Metal.framework" if="mac||iphoneos"/> 
+<dependency name="OpenGL.framework" if="mac" />    
+<dependency name="OpenGLES.framework" if="iphoneos" /> 
 	
 	<!--Used for Izzy Engine's crash handler-->
 	<haxedef name="HXCPP_CHECK_POINTER" if="CRASH_HANDLER" />
