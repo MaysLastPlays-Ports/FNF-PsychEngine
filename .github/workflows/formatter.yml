@@ -16,7 +16,7 @@ jobs:
         with:
           haxe-version: 4.2.5
       - name: Install Formatter
-        run: haxelib git formatter https://github.com/HaxeCheckstyle/haxe-formatter.git
+        run: haxelib --quiet install formatter
       - name: Format
         run: haxelib run formatter -s ./source
       - name: Push To Github
