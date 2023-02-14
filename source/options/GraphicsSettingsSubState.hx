@@ -44,6 +44,11 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			false); //Default value
 		addOption(option);
 
+                var option:Option = new Option('Render', '0 - RAM, 1 - GPU with Flash\n2 - GPU with OpenFL', 'render', 'int', 0);
+		option.minValue = 0;
+		option.maxValue = 2;
+		addOption(option);
+
 		var option:Option = new Option('Anti-Aliasing',
 			'If unchecked, disables anti-aliasing, increases performance\nat the cost of sharper visuals.',
 			'globalAntialiasing',
