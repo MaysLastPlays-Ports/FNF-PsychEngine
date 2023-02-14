@@ -197,7 +197,8 @@ class NativeAudioSource
 	{
 		playing = false;
 
-		if (handle == null) return;
+		if (handle == null)
+			return;
 		AL.sourcePause(handle);
 
 		if (streamTimer != null)
@@ -217,11 +218,11 @@ class NativeAudioSource
 		var buffer = new UInt8Array(length);
 		var read = 0, total = 0, readMax;
 
-		for (i in 0...STREAM_NUM_BUFFERS-1)
+		for (i in 0...STREAM_NUM_BUFFERS - 1)
 		{
 			bufferTimeBlocks[i] = bufferTimeBlocks[i + 1];
 		}
-		bufferTimeBlocks[STREAM_NUM_BUFFERS-1] = vorbisFile.timeTell();
+		bufferTimeBlocks[STREAM_NUM_BUFFERS - 1] = vorbisFile.timeTell();
 
 		while (total < length)
 		{
@@ -374,7 +375,8 @@ class NativeAudioSource
 			if (stream)
 			{
 				var time = (Std.int(bufferTimeBlocks[0] * 1000) + Std.int(AL.getSourcef(handle, AL.SEC_OFFSET) * 1000)) - parent.offset;
-				if (time < 0) return 0;
+				if (time < 0)
+					return 0;
 				return time;
 			}
 			else
@@ -386,7 +388,8 @@ class NativeAudioSource
 				var time = Std.int(totalSeconds * ratio * 1000) - parent.offset;
 
 				// var time = Std.int (AL.getSourcef (handle, AL.SEC_OFFSET) * 1000) - parent.offset;
-				if (time < 0) return 0;
+				if (time < 0)
+					return 0;
 				return time;
 			}
 		}
@@ -398,9 +401,9 @@ class NativeAudioSource
 	{
 		// `setCurrentTime()` has side effects and is never safe to skip.
 		/* if (value == getCurrentTime())
-		{
-			return value;
-		} */
+			{
+				return value;
+		}*/
 
 		if (handle != null)
 		{
@@ -412,19 +415,23 @@ class NativeAudioSource
 				AL.sourceUnqueueBuffers(handle, STREAM_NUM_BUFFERS);
 				refillBuffers(buffers);
 
-				if (playing) AL.sourcePlay(handle);
+				if (playing)
+					AL.sourcePlay(handle);
 			}
 			else if (parent.buffer != null)
 			{
 				AL.sourceRewind(handle);
-				if (playing) AL.sourcePlay(handle);
+				if (playing)
+					AL.sourcePlay(handle);
 				// AL.sourcef (handle, AL.SEC_OFFSET, (value + parent.offset) / 1000);
 
 				var secondOffset = (value + parent.offset) / 1000;
 				var totalSeconds = samples / parent.buffer.sampleRate;
 
-				if (secondOffset < 0) secondOffset = 0;
-				if (secondOffset > totalSeconds) secondOffset = totalSeconds;
+				if (secondOffset < 0)
+					secondOffset = 0;
+				if (secondOffset > totalSeconds)
+					secondOffset = totalSeconds;
 
 				var ratio = (secondOffset / totalSeconds);
 				var totalOffset = Std.int(dataLength * ratio);

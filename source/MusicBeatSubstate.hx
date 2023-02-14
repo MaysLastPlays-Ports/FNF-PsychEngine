@@ -5,7 +5,6 @@ import flixel.FlxG;
 import flixel.FlxSubState;
 import flixel.FlxBasic;
 import flixel.FlxSprite;
-
 #if android
 import flixel.input.actions.FlxActionInput;
 import android.FlxVirtualPad;
@@ -36,9 +35,10 @@ class MusicBeatSubstate extends FlxSubState
 	var trackedinputsUI:Array<FlxActionInput> = [];
 	var trackedinputsNOTES:Array<FlxActionInput> = [];
 	#end
-	
+
 	#if android
-	public function addVirtualPad(?DPad:FlxDPadMode, ?Action:FlxActionMode) {
+	public function addVirtualPad(?DPad:FlxDPadMode, ?Action:FlxActionMode)
+	{
 		_virtualpad = new FlxVirtualPad(DPad, Action, 0.75, ClientPrefs.globalAntialiasing);
 		add(_virtualpad);
 		controls.setVirtualPadUI(_virtualpad, DPad, Action);
@@ -48,22 +48,25 @@ class MusicBeatSubstate extends FlxSubState
 	#end
 
 	#if android
-	public function removeVirtualPad() {
+	public function removeVirtualPad()
+	{
 		controls.removeFlxInput(trackedinputsUI);
 		remove(_virtualpad);
 	}
 	#end
 
 	#if android
-		public function addPadCamera() {
+	public function addPadCamera()
+	{
 		var camcontrol = new flixel.FlxCamera();
 		camcontrol.bgColor.alpha = 0;
 		FlxG.cameras.add(camcontrol, false);
 		_virtualpad.cameras = [camcontrol];
 	}
 	#end
-	
-	override function destroy() {
+
+	override function destroy()
+	{
 		#if android
 		controls.removeFlxInput(trackedinputsUI);
 		controls.removeFlxInput(trackedinputsNOTES);
@@ -74,7 +77,7 @@ class MusicBeatSubstate extends FlxSubState
 
 	override function update(elapsed:Float)
 	{
-		//everyStep();
+		// everyStep();
 		var oldStep:Int = curStep;
 
 		updateCurStep();
@@ -83,14 +86,13 @@ class MusicBeatSubstate extends FlxSubState
 		if (oldStep != curStep && curStep > 0)
 			stepHit();
 
-
 		super.update(elapsed);
 	}
 
 	private function updateBeat():Void
 	{
 		curBeat = Math.floor(curStep / 4);
-		curDecBeat = curDecStep/4;
+		curDecBeat = curDecStep / 4;
 	}
 
 	private function updateCurStep():Void
@@ -110,6 +112,6 @@ class MusicBeatSubstate extends FlxSubState
 
 	public function beatHit():Void
 	{
-		//do literally nothing dumbass
+		// do literally nothing dumbass
 	}
 }

@@ -16,6 +16,7 @@ class OutdatedState extends MusicBeatState
 	public static var leftState:Bool = false;
 
 	var warnText:FlxText;
+
 	override function create()
 	{
 		super.create();
@@ -23,14 +24,16 @@ class OutdatedState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
-		warnText = new FlxText(0, 0, FlxG.width,
-			"Yo kid, looks like you're running an   \n
-			outdated version of Psych Engine (" + MainMenuState.psychEngineVersion + "),\n
-			update it to " + TitleState.updateVersion + " because it's past your bedtime!\n
+		warnText = new FlxText(0, 0, FlxG.width, "Yo kid, looks like you're running an   \n
+			outdated version of Psych Engine ("
+			+ MainMenuState.psychEngineVersion
+			+ "),\n
+			update it to "
+			+ TitleState.updateVersion
+			+ " because it's past your bedtime!\n
 			Press B to proceed anyway.\n
 			\n
-			Press A to update the port.",
-			32);
+			Press A to update the port.", 32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
@@ -42,20 +45,24 @@ class OutdatedState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if(!leftState) {
-			if (controls.ACCEPT) {
+		if (!leftState)
+		{
+			if (controls.ACCEPT)
+			{
 				leftState = true;
 				CoolUtil.browserLoad("https://github.com/mcagabe19/FNF-PsychEngine-Custom/actions");
 			}
-			else if(controls.BACK) {
+			else if (controls.BACK)
+			{
 				leftState = true;
 			}
 
-			if(leftState)
+			if (leftState)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				FlxTween.tween(warnText, {alpha: 0}, 1, {
-					onComplete: function (twn:FlxTween) {
+					onComplete: function(twn:FlxTween)
+					{
 						MusicBeatState.switchState(new MainMenuState());
 					}
 				});

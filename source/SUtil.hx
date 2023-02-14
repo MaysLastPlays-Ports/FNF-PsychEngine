@@ -20,15 +20,14 @@ import flash.system.System;
  * ...
  * @author: Saw (M.A. Jigsaw)
  */
-
 using StringTools;
 
 class SUtil
 {
 	#if android
 	private static var aDir:String = null; // android dir
-	#end
 
+	#end
 	public static function getPath():String
 	{
 		#if android
@@ -44,20 +43,23 @@ class SUtil
 	public static function doTheCheck()
 	{
 		#if android
-		if (!Permissions.getGrantedPermissions().contains(PermissionsList.READ_EXTERNAL_STORAGE) || !Permissions.getGrantedPermissions().contains(PermissionsList.WRITE_EXTERNAL_STORAGE))
+		if (!Permissions.getGrantedPermissions().contains(PermissionsList.READ_EXTERNAL_STORAGE)
+			|| !Permissions.getGrantedPermissions().contains(PermissionsList.WRITE_EXTERNAL_STORAGE))
 		{
 			Permissions.requestPermissions([PermissionsList.READ_EXTERNAL_STORAGE, PermissionsList.WRITE_EXTERNAL_STORAGE]);
 			SUtil.applicationAlert('Permissions', "if you acceptd the permissions all good if not expect a crash" + '\n' + 'Press Ok to see what happens');
 		}
 
-		if (Permissions.getGrantedPermissions().contains(PermissionsList.READ_EXTERNAL_STORAGE) || Permissions.getGrantedPermissions().contains(PermissionsList.WRITE_EXTERNAL_STORAGE))
+		if (Permissions.getGrantedPermissions().contains(PermissionsList.READ_EXTERNAL_STORAGE)
+			|| Permissions.getGrantedPermissions().contains(PermissionsList.WRITE_EXTERNAL_STORAGE))
 		{
 			if (!FileSystem.exists(Tools.getExternalStorageDirectory() + '/' + '.' + Application.current.meta.get('file')))
 				FileSystem.createDirectory(Tools.getExternalStorageDirectory() + '/' + '.' + Application.current.meta.get('file'));
 
 			if (!FileSystem.exists(SUtil.getPath() + 'assets') && !FileSystem.exists(SUtil.getPath() + 'mods'))
 			{
-				SUtil.applicationAlert('Uncaught Error :(!', "Whoops, seems you didn't extract the files from the .APK!\nPlease watch the tutorial by pressing OK.");
+				SUtil.applicationAlert('Uncaught Error :(!',
+					"Whoops, seems you didn't extract the files from the .APK!\nPlease watch the tutorial by pressing OK.");
 				CoolUtil.browserLoad('https://youtu.be/zjvkTmdWvfU');
 				System.exit(0);
 			}
@@ -65,14 +67,16 @@ class SUtil
 			{
 				if (!FileSystem.exists(SUtil.getPath() + 'assets'))
 				{
-					SUtil.applicationAlert('Uncaught Error :(!', "Whoops, seems you didn't extract the assets/assets folder from the .APK!\nPlease watch the tutorial by pressing OK.");
+					SUtil.applicationAlert('Uncaught Error :(!',
+						"Whoops, seems you didn't extract the assets/assets folder from the .APK!\nPlease watch the tutorial by pressing OK.");
 					CoolUtil.browserLoad('https://youtu.be/zjvkTmdWvfU');
 					System.exit(0);
 				}
 
 				if (!FileSystem.exists(SUtil.getPath() + 'mods'))
 				{
-					SUtil.applicationAlert('Uncaught Error :(!', "Whoops, seems you didn't extract the assets/mods folder from the .APK!\nPlease watch the tutorial by pressing OK.");
+					SUtil.applicationAlert('Uncaught Error :(!',
+						"Whoops, seems you didn't extract the assets/mods folder from the .APK!\nPlease watch the tutorial by pressing OK.");
 					CoolUtil.browserLoad('https://youtu.be/zjvkTmdWvfU');
 					System.exit(0);
 				}
@@ -110,7 +114,7 @@ class SUtil
 		errMsg += e.error;
 
 		if (!FileSystem.exists(SUtil.getPath() + "crash"))
-		FileSystem.createDirectory(SUtil.getPath() + "crash");
+			FileSystem.createDirectory(SUtil.getPath() + "crash");
 
 		File.saveContent(SUtil.getPath() + path, errMsg + "\n");
 
@@ -149,4 +153,4 @@ class SUtil
 			File.saveBytes(savePath, OpenFlAssets.getBytes(copyPath));
 	}
 	#end
-} 
+}

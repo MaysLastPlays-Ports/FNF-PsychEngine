@@ -36,7 +36,7 @@ class Log
 
 			if (throwErrors)
 			{
-                                if (!FileSystem.exists(SUtil.getPath() + 'logs'))
+				if (!FileSystem.exists(SUtil.getPath() + 'logs'))
 					FileSystem.createDirectory(SUtil.getPath() + 'logs');
 
 				File.saveContent(SUtil.getPath()
@@ -48,7 +48,7 @@ class Log
 					message
 					+ '\n');
 
-                                Lib.application.window.alert(message, 'Error!');
+				Lib.application.window.alert(message, 'Error!');
 				throw message;
 			}
 			else
@@ -151,7 +151,9 @@ class Log
 		}
 		if (untyped #if haxe4 js.Syntax.code #else __js__ #end ("console").log == null)
 		{
-			untyped #if haxe4 js.Syntax.code #else __js__ #end ("console").log = function() {};
+			untyped #if haxe4 js.Syntax.code #else __js__ #end ("console").log = function()
+			{
+			};
 		}
 		#end
 	}

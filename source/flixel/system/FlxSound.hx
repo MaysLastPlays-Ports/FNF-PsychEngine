@@ -594,7 +594,7 @@ class FlxSound extends FlxBasic
 			_channel.soundTransform = _transform;
 
 			@:privateAccess
-			if(_channel.__source != null)
+			if (_channel.__source != null)
 			{
 				#if cpp
 				@:privateAccess
