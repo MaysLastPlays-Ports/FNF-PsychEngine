@@ -47,6 +47,10 @@ class Main extends Sprite
 	public static function main():Void
 	{
 		Lib.current.addChild(new Main());
+                #if cpp
+                cpp.NativeGc.enable(true);
+                cpp.NativeGc.run(true);
+                #end
 	}
 
 	public function new()
