@@ -16,8 +16,8 @@ jobs:
         with:
           haxe-version: 4.2.5
       - name: Install Formatter
-        run: haxelib --quiet install formatter
+        run: haxelib git formatter https://github.com/HaxeCheckstyle/haxe-formatter.git
       - name: Format
         run: haxelib run formatter -s ./source
       - name: Push To Github
-        run: rm -rR ./haxe-4.2.5-linux64 && rm -rR ./neko-2.3.0-linux64 && git config --local user.email "actions@github.com" && git config --local user.name "GitHub Actions" && git add . && git commit -m "Runned Formatter" || true && git push -u origin master
+        run: rm -rR ./haxe-4.2.5-linux64 && rm -rR ./neko-2.3.0-linux64 && git config --local user.email "actions@github.com" && git config --local user.name "GitHub Actions" && git add . && git commit -m "Runned Formatter" || true && git push -u origin main
