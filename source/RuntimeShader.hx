@@ -1,3 +1,5 @@
+package;
+
 import FlxShader;
 
 class RuntimeShader extends FlxShader {
