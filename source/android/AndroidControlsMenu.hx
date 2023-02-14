@@ -92,7 +92,7 @@ class AndroidControlsMenu extends MusicBeatState
 		leftPozition.borderSize = 2.4;
 		add(leftPozition);
 
-		rightPozition = new FlxText(10, FlxG.height - 44, 0,"Button RIght x:" + vpad.buttonRight.x +" Y:" + vpad.buttonRight.y, 16);
+		rightPozition = new FlxText(10, FlxG.height - 44, 0,"Button Right x:" + vpad.buttonRight.x +" Y:" + vpad.buttonRight.y, 16);
 		rightPozition.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		rightPozition.borderSize = 2.4;
 		add(rightPozition);
