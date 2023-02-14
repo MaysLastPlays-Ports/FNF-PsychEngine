@@ -86,15 +86,16 @@ class Paths
 				}
 			}
 		}
-
 		// run the garbage collector for good measure lmfao
 		System.gc();
+                #if cpp
+		cpp.NativeGc.run(true);
+		#end
 	}
 
 	// define the locally tracked assets
 	public static var localTrackedAssets:Array<String> = [];
-	public static function clearStoredMemory(?cleanUnused:Bool = false) {
-		public static function clearStoredMemory()
+	public static function clearStoredMemory()
 	{
 		// clear anything not in the tracked assets list
 		var counterAssets:Int = 0;
