@@ -63,8 +63,8 @@ class GameplayChangersSubstate extends MusicBeatSubstate
 		#if !html5
 		var option:GameplayOption = new GameplayOption('Playback Rate', 'songspeed', 'float', 1);
 		option.scrollSpeed = 1;
-		option.minValue = 0.5;
-		option.maxValue = 3.0;
+		option.minValue = 0;
+		option.maxValue = 6.0;
 		option.changeValue = 0.05;
 		option.displayFormat = '%vX';
 		option.decimals = 2;
@@ -74,15 +74,15 @@ class GameplayChangersSubstate extends MusicBeatSubstate
 		var option:GameplayOption = new GameplayOption('Health Gain Multiplier', 'healthgain', 'float', 1);
 		option.scrollSpeed = 2.5;
 		option.minValue = 0;
-		option.maxValue = 5;
+		option.maxValue = 10;
 		option.changeValue = 0.1;
 		option.displayFormat = '%vX';
 		optionsArray.push(option);
 
 		var option:GameplayOption = new GameplayOption('Health Loss Multiplier', 'healthloss', 'float', 1);
 		option.scrollSpeed = 2.5;
-		option.minValue = 0.5;
-		option.maxValue = 5;
+		option.minValue = 0;
+		option.maxValue = 10;
 		option.changeValue = 0.1;
 		option.displayFormat = '%vX';
 		optionsArray.push(option);
