@@ -6,7 +6,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class NoteSplash extends FlxSprite
 {
-	public var colorSwap:ColorSwap = null;
+	//public var colorSwap:ColorSwap = null;
 
 	private var idleAnim:String;
 	private var textureLoaded:String = null;
@@ -21,8 +21,8 @@ class NoteSplash extends FlxSprite
 
 		loadAnims(skin);
 
-		colorSwap = new ColorSwap();
-		shader = colorSwap.shader;
+		/*colorSwap = new ColorSwap();
+		shader = colorSwap.shader;*/
 
 		setupNoteSplash(x, y, note);
 		antialiasing = ClientPrefs.globalAntialiasing;
@@ -44,9 +44,9 @@ class NoteSplash extends FlxSprite
 		{
 			loadAnims(texture);
 		}
-		colorSwap.hue = hueColor;
+		/*colorSwap.hue = hueColor;
 		colorSwap.saturation = satColor;
-		colorSwap.brightness = brtColor;
+		colorSwap.brightness = brtColor;*/
 		offset.set(10, 10);
 
 		var animNum:Int = FlxG.random.int(1, 2);
