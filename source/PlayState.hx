@@ -897,7 +897,7 @@ class PlayState extends MusicBeatState
 		// "GLOBAL" SCRIPTS
 		#if LUA_ALLOWED
 		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [SUtil.getPath() + Paths.getPreloadPath('scripts/'), Paths.modFolders('shaders/')];
+		var foldersToCheck:Array<String> = [SUtil.getPath() + Paths.getPreloadPath('scripts/')];
 
 		#if MODS_ALLOWED
 		foldersToCheck.insert(0, Paths.mods('scripts/'));
@@ -1473,7 +1473,7 @@ class PlayState extends MusicBeatState
 			return true;
 		}
 
-		var foldersToCheck:Array<String> = [SUtil.getPath() + Paths.getPreloadPath('shaders/')];
+		var foldersToCheck:Array<String> = [SUtil.getPath() + Paths.getPreloadPath('shaders/'), Paths.modFolders('shaders/')];
 
 		if (Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
 			foldersToCheck.insert(0, Paths.mods(Paths.currentModDirectory + '/shaders/'));
