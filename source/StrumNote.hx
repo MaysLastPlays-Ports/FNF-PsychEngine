@@ -163,20 +163,20 @@ class StrumNote extends FlxSprite
 		animation.play(anim, force);
 		centerOffsets();
 		centerOrigin();
-		/*if (animation.curAnim == null || animation.curAnim.name == 'static')
+		if (animation.curAnim == null || animation.curAnim.name == 'static')
 		{
-			colorSwap.hue = 0;
+			/*colorSwap.hue = 0;
 			colorSwap.saturation = 0;
-			colorSwap.brightness = 0;
+			colorSwap.brightness = 0;*/
 		}
 		else
 		{
 			if (noteData > -1 && noteData < ClientPrefs.arrowHSV.length)
 			{
-				colorSwap.hue = ClientPrefs.arrowHSV[noteData][0] / 360;
+				/*colorSwap.hue = ClientPrefs.arrowHSV[noteData][0] / 360;
 				colorSwap.saturation = ClientPrefs.arrowHSV[noteData][1] / 100;
-				colorSwap.brightness = ClientPrefs.arrowHSV[noteData][2] / 100;
-			}*/
+				colorSwap.brightness = ClientPrefs.arrowHSV[noteData][2] / 100;*/
+			}
 
 			if (animation.curAnim.name == 'confirm' && !PlayState.isPixelStage)
 			{
