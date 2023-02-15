@@ -4,9 +4,7 @@ Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), 
 ## Installation:
 You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
 
-open up a Command Prompt/PowerShell or Terminal, type `haxelib install hmm`
-
-after it finishes, simply type `haxelib run hmm install` in order to install all the needed libraries for *Psych Engine!*
+and just check the fucking workflow file there is haxelibs
 
 ## Customization:
 
@@ -21,9 +19,9 @@ same goes for *Lua Scripts*, comment out or delete the line with `LUA_ALLOWED`, 
 # Build instructions For Android
 
 1. Download
-* <a href = "https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html"> JDK </a> - download jdk 8
+* <a href = "https://cdn.azul.com/zulu/bin/zulu11.62.17-ca-jdk11.0.18-win_x64.msi"> JDK </a> - download jdk 11
 * <a href = "https://developer.android.com/studio"> Android Studio </a>
-* <a href = "https://developer.android.com/ndk/downloads/older_releases?hl=fi"> NDK </a> - download the r15c
+* <a href = "https://developer.android.com/ndk/downloads/older_releases?hl=fi"> NDK </a> - download the r21e
 
 2. Install JDK, Android Studio 
 Unzip ndk (ndk does not need to be installed)
@@ -46,18 +44,18 @@ haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-a
 
 haxelib remove hxCodec
 
-haxelib git hxCodec https://github.com/MAJigsaw77/hxCodec.git
+haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-old.git
 
 haxelib remove linc_luajit
 
 haxelib git linc_luajit https://github.com/Sirox228/linc_luajit.git
 
-haxelib git hxShaders https://github.com/JonnycatMeow/hxShaders.git
+haxelib git hxShaders https://github.com/mcagabe19/hxShaders.git
 
 ```
 
 6. Open project in command line `cd (path to fnf source)`
-And run command `lime build android -final`
+And run command `lime build android -release` or `lime build android -final`
 Apk will be generated in this path (path to source)\export\release\android\bin\app\build\outputs\apk\debug
 
 ## Credits:
