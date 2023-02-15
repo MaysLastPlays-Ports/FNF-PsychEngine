@@ -41,6 +41,8 @@ class ColorSwap
 class ColorSwapShader extends FlxShader
 {
 	@:glFragmentSource('
+		#version 120
+
 		varying float openfl_Alphav;
 		varying vec4 openfl_ColorMultiplierv;
 		varying vec4 openfl_ColorOffsetv;
