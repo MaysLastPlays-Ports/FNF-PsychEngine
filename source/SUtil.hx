@@ -97,9 +97,21 @@ class SUtil
 				LimeSystem.exit(1);
 			}
 		}
-		#end
+                #end
 
-		#if mobile
+                #if mobile
+		if (!FileSystem.exists(SUtil.getStorageDirectory() + 'mods'))
+		{
+			Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getStorageDirectory(),
+				'Error!');
+			LimeSystem.exit(1);
+		}
+		else if (FileSystem.exists(SUtil.getStorageDirectory() + 'mods') && !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'mods'))
+		{
+			Lib.application.window.alert("Why did you create a file called mods instead of copying the mods directory from the .APK?, expect a crash.",
+				'Error!');
+			LimeSystem.exit(1);
+		}
 		if (!sys.FileSystem.exists(SUtil.getPath()))
 		{
 			Lib.application.window.alert('Please create folder to\n' + SUtil.getPath() + '\nPress Ok to close the app', 'Error!');
