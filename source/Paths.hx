@@ -372,8 +372,6 @@ class Paths
 			{
 				var bitmap:BitmapData = BitmapData.fromFile(modsImages(key));
 				var newGraphic:FlxGraphic = null;
-				if (gpurender)
-				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -395,7 +393,6 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 					}
-				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 
@@ -414,9 +411,6 @@ class Paths
 			{
 				var newGraphic:FlxGraphic = null;
 				var bitmap:BitmapData = OpenFlAssets.getBitmapData(path);
-
-				if (gpurender)
-				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -438,7 +432,6 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 					}
-				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 
