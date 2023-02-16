@@ -42,9 +42,7 @@ To Install Them You Need To Open Command prompt/PowerShell And To Tipe
 ```cmd
 haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
 
-haxelib remove hxCodec
-
-haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-old.git
+haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
 
 haxelib remove linc_luajit
 
