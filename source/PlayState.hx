@@ -73,7 +73,7 @@ import sys.io.File;
 import vlc.MP4Handler;
 #end
 #if VIDEOVIEW
-import extension.videoview.VideoView
+import extension.videoview.VideoView;
 #end
 
 using StringTools;
@@ -1709,7 +1709,7 @@ class PlayState extends MusicBeatState
 			return;
 		}
                 var video:VideoView = new VideoView();
-		video.playVideo('file:///' + filepath);
+		video.playVideo('file://' + filepath);
 		video.onCompletion = function()
 		{
 			startAndEnd();
