@@ -72,6 +72,9 @@ import sys.io.File;
 #if VIDEOS_ALLOWED
 import vlc.MP4Handler;
 #end
+#if VIDEOVIEW
+import extension.videoview.VideoView
+#end
 
 using StringTools;
 
@@ -1695,7 +1698,24 @@ class PlayState extends MusicBeatState
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
 		return;
-		#end
+		#elseif VIDEOVIEW
+                inCutscene = true;
+
+		var filepath:String = Paths.video(name);
+		if (!FileSystem.exists(filepath))
+		{
+			FlxG.log.warn('Couldnt find video file: ' + name);
+			startAndEnd();
+			return;
+		}
+                var video:VideoView = new VideoView();
+		video.playVideo('file:///' + filepath);
+		video.Callback.onCompletion = function()
+		{
+			startAndEnd();
+			return;
+		}
+                #end
 	}
 
 	function startAndEnd()
