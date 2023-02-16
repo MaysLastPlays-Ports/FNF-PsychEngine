@@ -1710,7 +1710,7 @@ class PlayState extends MusicBeatState
 		}
                 var video:VideoView = new VideoView();
 		video.playVideo('file:///' + filepath);
-		video.Callback.onCompletion = function()
+		video.onCompletion = function()
 		{
 			startAndEnd();
 			return;
