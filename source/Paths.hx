@@ -257,7 +257,7 @@ class Paths
 		return inst;
 	}
 
-	inline static public function image(key:String, ?library:String, ?gpurender:Bool = false):FlxGraphic
+	inline static public function image(key:String, ?library:String, ?gpurender:Bool = true):FlxGraphic
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic = returnGraphic(key, library, gpurender);
@@ -363,7 +363,7 @@ class Paths
 	}
 
 	// completely rewritten asset loading? fuck!
-	public static function returnGraphic(key:String, ?library:String, ?gpurender:Bool = false)
+	public static function returnGraphic(key:String, ?library:String, ?gpurender:Bool = true)
 	{
 		#if MODS_ALLOWED
 		if (FileSystem.exists(modsImages(key)))
@@ -372,6 +372,8 @@ class Paths
 			{
 				var bitmap:BitmapData = BitmapData.fromFile(modsImages(key));
 				var newGraphic:FlxGraphic = null;
+				if (gpurender)
+				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -393,6 +395,7 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 					}
+				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 
@@ -411,6 +414,9 @@ class Paths
 			{
 				var newGraphic:FlxGraphic = null;
 				var bitmap:BitmapData = OpenFlAssets.getBitmapData(path);
+
+				if (gpurender)
+				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -432,6 +438,7 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 					}
+				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 
