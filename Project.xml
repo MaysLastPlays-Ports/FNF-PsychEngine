@@ -47,7 +47,8 @@
 	<define name="MODS_ALLOWED" if="desktop || android" />
 	<define name="LUA_ALLOWED" if="desktop || android" unless="nolua" />
 	<define name="ACHIEVEMENTS_ALLOWED" />
-	<define name="VIDEOS_ALLOWED" if="web || windows || android" unless="32bits || nohxcodec" />
+	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits || nohxcodec" />
+        <define name="VIDEOVIEW" if="android" />
 	<define name="PSYCH_WATERMARKS"/> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->
 	<define name="TITLE_SCREEN_EASTER_EGG" if="officialBuild"/> <!-- DELETE THE if="officialBuild" for enabling this on an unofficial build -->
 	<define name="CRASH_HANDLER" if="desktop release || android" />
@@ -136,6 +137,7 @@
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
 	<haxelib name="hxCodec" if="VIDEOS_ALLOWED"/> 
         <haxelib name="extension-androidtools" if="android"/>
+        <haxelib name="extension-videoview" if="VIDEOVIEW"/>
 	<haxelib name="faxe" if='switch'/>
 	<!--<haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="desktop"/>
