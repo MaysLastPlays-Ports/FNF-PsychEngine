@@ -100,13 +100,13 @@ class SUtil
                 #end
 
                 #if mobile
-		if (!FileSystem.exists(SUtil.getStorageDirectory() + 'mods'))
+		if (!FileSystem.exists(SUtil.getPath() + 'mods'))
 		{
-			Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getStorageDirectory(),
+			Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getPath(),
 				'Error!');
 			LimeSystem.exit(1);
 		}
-		else if (FileSystem.exists(SUtil.getStorageDirectory() + 'mods') && !FileSystem.isDirectory(SUtil.getStorageDirectory() + 'mods'))
+		else if (FileSystem.exists(SUtil.getPath() + 'mods') && !FileSystem.isDirectory(SUtil.getPath() + 'mods'))
 		{
 			Lib.application.window.alert("Why did you create a file called mods instead of copying the mods directory from the .APK?, expect a crash.",
 				'Error!');
