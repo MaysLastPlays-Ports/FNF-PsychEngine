@@ -93,10 +93,10 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
-          haxelib git lime https://github.com/mcagabe19/lime.git
+          haxelib install hxcpp 4.2.1 --quiet
+          haxelib install lime 7.9.0 --quiet
           haxelib install openfl 9.1.0 --quiet
-          haxelib --never git flixel https://github.com/mcagabe19/flixel-4.11.0.git
+          haxelib --never install flixel 4.11.0 --quiet
           haxelib install flixel-tools --quiet 
           haxelib install flixel-ui --quiet
           haxelib install flixel-addons 2.11.0 --quiet
@@ -148,10 +148,10 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib git hxcpp https://github.com/mcagabe19/hxcpp-fastspeed.git
+          haxelib install hxcpp 4.2.1 --quiet
           haxelib git lime https://github.com/mcagabe19/lime.git
           haxelib install openfl 9.1.0 --quiet
-          haxelib --never git flixel https://github.com/mcagabe19/flixel-4.11.0.git
+          haxelib --never install flixel 4.11.0 --quiet
           haxelib install flixel-tools --quiet 
           haxelib install flixel-ui --quiet
           haxelib install flixel-addons 2.11.0 --quiet
