@@ -203,6 +203,7 @@
 	<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
   <config:android gradle-version="7.4.2" />
   <config:android gradle-plugin="7.3.1" />
+  <config:android target-sdk-version="29" if="${lime <= 8.0.0}" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
