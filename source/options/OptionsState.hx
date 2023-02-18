@@ -31,7 +31,7 @@ using StringTools;
 class OptionsState extends MusicBeatState
 {
 	var options:Array<String> = [
-		//'Note Colors',
+		'Note Colors',
 		'Controls',
 		'Adjust Delay and Combo',
 		'Graphics',
@@ -47,11 +47,11 @@ class OptionsState extends MusicBeatState
 	{
 		switch (label)
 		{
-			/*case 'Note Colors':
+			case 'Note Colors':
 				#if android
 				removeVirtualPad();
 				#end
-				openSubState(new options.NotesSubState());*/
+				openSubState(new options.NotesSubState());
 			case 'Controls':
 				#if android
 				removeVirtualPad();
