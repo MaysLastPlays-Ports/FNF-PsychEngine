@@ -88,7 +88,7 @@ class AndroidControls extends FlxSpriteGroup {
 		    if(!ClientPrefs.newhitbox){
 				initControler(4);
 		    }else{
-		    initControler(5)
+		    initControler(5);
 		    }
 			case KEYBOARD:// nothing
 		}
