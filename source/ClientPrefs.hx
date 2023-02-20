@@ -35,6 +35,7 @@ class ClientPrefs {
 	public static var checkForUpdates:Bool = true;
 	public static var comboStacking = true;
 	public static var newhitbox = false;
+	public static var hitboxmode:String = 'Classic';  //starting new way to change between hitboxes yay
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 
