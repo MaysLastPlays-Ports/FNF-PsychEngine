@@ -85,7 +85,7 @@ class AndroidControls extends FlxSpriteGroup {
 			case DUO:
 				initControler(3);
 			case HITBOX:
-		    if(!ClientPrefs.hitboxmode == 'New'){
+		    if(ClientPrefs.hitboxmode != 'New'){
 				initControler(4);
 		    }else{
 		    initControler(5);
