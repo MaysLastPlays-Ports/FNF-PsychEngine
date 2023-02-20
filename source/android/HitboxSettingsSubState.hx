@@ -26,6 +26,7 @@ import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
 import options.BaseOptionsMenu;
+import options.Option;
 import openfl.Lib;
 
 using StringTools;
