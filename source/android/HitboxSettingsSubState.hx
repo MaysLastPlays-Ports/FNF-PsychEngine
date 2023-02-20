@@ -4,9 +4,9 @@ package android;
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
-import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.FlxCamera;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
@@ -35,8 +35,8 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Hitbox Settings Menu';
-		rpcTitle = 'Hitbox Settings Menu'; //hi
+		title = 'Hitbox Settings';
+		rpcTitle = 'Hitbox Settings Menu'; //hi, you can ask what is that, i will answer it's all what you needed lol.
 
 		var option:Option = new Option('Hitbox Mode:',
 			"Choose your Hitbox Style!  -mariomaster",
@@ -44,7 +44,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 			'string',
 			'Classic',
 			['Classic', 'New']);
-		addOption(option);
+		  addOption(option);
 
 		super();
 	}
