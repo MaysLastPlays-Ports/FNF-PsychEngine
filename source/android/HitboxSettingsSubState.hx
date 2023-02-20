@@ -1,10 +1,9 @@
-package android;
+package options;
 
 #if desktop
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
-import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -25,8 +24,9 @@ import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
-import BaseOptionsMenu;
-import openfl.Lib;
+#if android
+import android.Hardware;
+#end
 
 using StringTools;
 
@@ -34,8 +34,8 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Hitbox Settings Menu';
-		rpcTitle = 'Hitbox Settings Menu'; //hi
+		title = 'Hitbox Settings';
+		rpcTitle = 'Hitbox Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Hitbox Mode:',
 			"Choose your Hitbox Style!  -mariomaster",
@@ -43,7 +43,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 			'string',
 			'Classic',
 			['Classic', 'New']);
-		addOption(option);
+		  addOption(option);
 
 		super();
 	}
