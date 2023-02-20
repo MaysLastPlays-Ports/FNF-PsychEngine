@@ -45,6 +45,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			#if android true #else false #end);
 		addOption(option);
 		#end
+		
+		var option:Option = new Option('New Hitbox', //its a me
+			'placeholder btw',
+			'newhitbox',
+			'bool',
+			false);
+		addOption(option);
 
 		//I'd suggest using "Downscroll" as an example for making your own option since it is the simplest here
 		var option:Option = new Option('Downscroll', //Name
