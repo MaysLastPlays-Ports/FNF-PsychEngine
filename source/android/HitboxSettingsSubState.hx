@@ -35,7 +35,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 	public function new()
 	{
 		title = 'Hitbox Settings';
-		rpcTitle = 'Hitbox Settings Menu'; //for Discord Rich Presence
+		rpcTitle = 'Hitbox Settings Menu'; //hi, you can ask what i that, i will answer it's all what you needed lol.
 
 		var option:Option = new Option('Hitbox Mode:',
 			"Choose your Hitbox Style!  -mariomaster",
