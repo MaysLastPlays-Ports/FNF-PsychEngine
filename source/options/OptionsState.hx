@@ -111,7 +111,7 @@ class OptionsState extends MusicBeatState
 		tipText.borderSize = 2;
 		tipText.scrollFactor.set();
 		add(tipText);
-		var tipText:FlxText = new FlxText(10, 22, 0, 'Press Y to Go In Hitbox Settings Menu', 16);
+		var tipText:FlxText = new FlxText(10, 32, 0, 'Press Y to Go In Hitbox Settings Menu', 16);
 		tipText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		tipText.borderSize = 2;
 		tipText.scrollFactor.set();
@@ -157,6 +157,7 @@ class OptionsState extends MusicBeatState
 		if (_virtualpad.buttonY.justPressed) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
+			removeVirtualPad();
 			MusicBeatState.switchState(new android.HitboxSettingsSubState());
 		}
 		#end
