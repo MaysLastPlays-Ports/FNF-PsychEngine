@@ -70,7 +70,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new options.OptionsState());
-		}
 	}
 		#end
+		}
 }
