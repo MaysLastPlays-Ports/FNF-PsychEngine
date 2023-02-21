@@ -60,4 +60,17 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 
 		super();
 	}
+	override function update(elapsed:Float)
+
+	{
+		super.update(elapsed);
+			#if android
+		if (FlxG.android.justReleased.BACK)
+		{
+			save();
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
+			MusicBeatState.switchState(new options.OptionsState());
+		}
+		#end
 }
