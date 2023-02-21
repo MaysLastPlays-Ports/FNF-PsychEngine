@@ -50,7 +50,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 			'Changes opacity -omg',
 			'hitboxalpha',
 			'float',
-			1);
+			0.2);
 		option.scrollSpeed = 1.6;
 		option.minValue = 0.0;
 		option.maxValue = 1;
