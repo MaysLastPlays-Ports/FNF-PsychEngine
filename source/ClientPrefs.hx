@@ -134,7 +134,10 @@ class ClientPrefs {
 		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.checkForUpdates = checkForUpdates;
 		FlxG.save.data.comboStacking = comboStacking;
-		FlxG.save.data.newhitbox = newhitbox;
+		
+		FlxG.save.data.hitboxmode = hitboxmode;
+		FlxG.save.data.hitboxalpha = hitboxalpha;
+	
 	
 		FlxG.save.flush();
 
@@ -172,9 +175,6 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
-		}
-		if(FlxG.save.data.newhitbox != null) {
-			newhitbox = FlxG.save.data.newhitbox;
 		}
 		if(FlxG.save.data.shaders != null) {
 			shaders = FlxG.save.data.shaders;
@@ -250,8 +250,11 @@ class ClientPrefs {
 		if(FlxG.save.data.hitsoundVolume != null) {
 			hitsoundVolume = FlxG.save.data.hitsoundVolume;
 		}
-		if(FlxG.save.data.newhitbox != null) {
-    newhitbox = FlxG.save.data.newhitbox;
+		if(FlxG.save.data.hitboxmode != null) {
+			hitboxmode = FlxG.save.data.hitboxmode;
+		}
+		if(FlxG.save.data.hitboxalpha != null) {
+			hitboxalpha = FlxG.save.data.hitboxalpha;
 		}
 		if(FlxG.save.data.pauseMusic != null) {
 			pauseMusic = FlxG.save.data.pauseMusic;
