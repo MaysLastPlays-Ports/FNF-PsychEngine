@@ -184,15 +184,12 @@ class AndroidControlsMenu extends MusicBeatState
 
 		if (daChoice != "Hitbox")
 		{
-			if(!ClientPrefs.newhitbox){
 			hbox.visible = false;
-			}else{
 			newhbox.visible = false;
-			}
 		}
 		else
 		{
-		if(!ClientPrefs.newhitbox){
+		if(ClientPrefs.hitboxmode != 'New'){
 			hbox.visible = true;
 		     }else{
 		       newhbox.visible = true;
