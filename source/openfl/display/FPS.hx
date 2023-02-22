@@ -65,6 +65,7 @@ currentTime += deltaTime;
 
 		size = Math.round(size * 100) / 100;
 
+times.shift();
 		if (data <= 2)
 			size = Math.round(size);
 
