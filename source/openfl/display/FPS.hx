@@ -27,85 +27,51 @@ import openfl.system.System;
 #end
 
 class FPS extends TextField
-{
-	/**
-		The current frame rate, expressed using frames-per-second
-	**/
+{/**		The current frame rate, expressed using frames-per-second**/
 	public var currentFPS(default, null):Int;
-
 	@:noCompletion private var cacheCount:Int;
+
+		var mem = System.totalMemory;
+		if (mem > peak)
+			peak = mem;
+		text += "MEM: " + getSizeLabel(System.totalMemory) + "\n";
+@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
 	@:noCompletion private var times:Array<Float>;
+public function new
+(x:Float = 10, y:Float = 10, color:Int = 0x000000)	{		super();
+		this.x = x;		this.y = y;
+		currentFPS = 0;		selectable = false;		mouseEnabled = false;		defaultTextFormat = new TextFormat("_sans", 14, color);		autoSize = LEFT;		multiline = true;		text = "FPS: ";
+		cacheCount = 0;		currentTime = 0;		times = [];
+		#if flash		addEventListener(Event.ENTER_FRAME, function(e)		{			var time = Lib.getTimer();			__enterFrame(time - currentTime);		});		#end
 
-	public function new(x:Float = 10, y:Float = 10, color:Int = 0x000000)
-	{
-		super();
-
-		this.x = x;
-		this.y = y;
-
-		currentFPS = 0;
-		selectable = false;
-		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 14, color);
-		autoSize = LEFT;
-		multiline = true;
-		text = "FPS: ";
-
-		cacheCount = 0;
-		currentTime = 0;
-		times = [];
-
-		#if flash
-		addEventListener(Event.ENTER_FRAME, function(e)
-		{
-			var time = Lib.getTimer();
-			__enterFrame(time - currentTime);
-		});
-		#end
+		text += "MEM peak: " + getSizeLabel(peak) + "\n";
 	}
 
-	// Event Handlers
-	@:noCompletion
-	private #if !flash override #end function __enterFrame(deltaTime:Float):Void
+	final dataTexts = ["B", "KB", "MB", "GB", "TB", "PB"];
+/ Event Handlers	@:noCompletion	private #if !flash override #end function __enterFrame(deltaTime:Float):Void	{		currentTime += deltaTime;		times.push(currentTime);
+	function getSizeLabel(num:UInt):String
 	{
-		currentTime += deltaTime;
-		times.push(currentTime);
-
-		while (times[0] < currentTime - 1000)
+		var size:Float = num;
+		var data = 0;
+		while (size > 1024 && data < dataTexts.length - 1)
 		{
-			times.shift();
+			data++;
+			size = size / 1024;
 		}
 
-		var currentCount = times.length;
-		currentFPS = Math.round((currentCount + cacheCount) / 2);
-		if (currentFPS > ClientPrefs.framerate) currentFPS = ClientPrefs.framerate;
+		size = Math.round(size * 100) / 100;
 
-		if (currentCount != cacheCount /*&& visible*/)
-		{
-			text = "FPS: " + currentFPS;
-			var memoryMegas:Float = 0;
-			
-			#if openfl
-			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
-			text += "\nMemory: " + memoryMegas + " MB";
-			#end
+		if (data <= 2)
+			size = Math.round(size);
 
-			textColor = 0xFFFFFFFF;
-			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)
-			{
-				textColor = 0xFFFF0000;
-			}
-
-			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
-			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();
-			text += "\nstageDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE);
-			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);
-			#end
-
-			text += "\n";
-		}
-
-		cacheCount = currentCount;
+		return size + " " + dataTexts[data];
+textColor = 0xFFFFFFFF;			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)			{				textColor = 0xFFFF0000;			}
+			#if (gl_stats && !disable_cffi && (!html5 || !canvas))			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();			text += "\nstageDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE);			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);			#end
+			text += "\n";		}
+var currentCount = times.length;		currentFPS = Math.round((currentCount + cacheCount) / 2);		if (currentFPS > ClientPrefs.framerate) currentFPS = ClientPrefs.framerate;
+		if (currentCount != cacheCount /*&& visible*/)		{			text = "FPS: " + currentFPS;			var memoryMegas:Float = 0;
+			#if openfl			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));			text += "\nMemory: " + memoryMegas + " MB";			#end
+cacheCount = currentCount;
 	}
 }
