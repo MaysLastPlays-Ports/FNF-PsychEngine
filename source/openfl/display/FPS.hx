@@ -47,7 +47,10 @@ public function new
 
 		text += "MEM peak: " + getSizeLabel(peak) + "\n";
 	}
+currentTime += deltaTime;
+		times.push(currentTime);
 
+		while (times[0] < currentTime - 1000)
 	final dataTexts = ["B", "KB", "MB", "GB", "TB", "PB"];
 / Event Handlers	@:noCompletion	private #if !flash override #end function __enterFrame(deltaTime:Float):Void	{		currentTime += deltaTime;		times.push(currentTime);
 	function getSizeLabel(num:UInt):String
