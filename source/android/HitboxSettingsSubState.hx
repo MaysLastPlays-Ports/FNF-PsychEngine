@@ -62,6 +62,7 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 		super();
 	}
 
+/*
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -74,4 +75,5 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 	}
 		#end
 		}
+	*/ //why this exists?!?¡
 }
