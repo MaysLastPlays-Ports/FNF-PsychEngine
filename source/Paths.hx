@@ -363,7 +363,7 @@ class Paths
 	}
 
 	// completely rewritten asset loading? fuck!
-	public static function returnGraphic(key:String, ?library:String, ?gpurender:Bool = true)
+	public static function returnGraphic(key:String, ?library:String)
 	{
 		#if MODS_ALLOWED
 		if (FileSystem.exists(modsImages(key)))
@@ -372,8 +372,6 @@ class Paths
 			{
 				var bitmap:BitmapData = BitmapData.fromFile(modsImages(key));
 				var newGraphic:FlxGraphic = null;
-				if (gpurender)
-				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -395,7 +393,6 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 					}
-				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
 
