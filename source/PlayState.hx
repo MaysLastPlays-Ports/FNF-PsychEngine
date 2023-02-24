@@ -1687,23 +1687,23 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
-                #if VIDEOS_ALLOWED
+		#if VIDEOS_ALLOWED
 		var video:MP4Handler = new MP4Handler();
 		video.playVideo(filepath);
 		video.finishCallback = function()
-                #elseif VIDEOVIEW
-                VideoView.playVideo(filepath);
+		#elseif VIDEOVIEW
+		VideoView.playVideo(filepath);
 		VideoView.onCompletion = function()
-                #end
+		#end
 		{
 			startAndEnd();
 			return;
 		}
-                #else
+		#else
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
 		return;
-                #end
+		#end
 	}
 
 	function startAndEnd()

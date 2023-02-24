@@ -97,12 +97,13 @@ class SUtil
 				LimeSystem.exit(1);
 			}
 		}
-                #end
+		#end
 
-                #if mobile
+		#if mobile
 		if (!FileSystem.exists(SUtil.getPath() + 'mods'))
 		{
-			Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getPath(),
+			Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n"
+				+ SUtil.getPath(),
 				'Error!');
 			LimeSystem.exit(1);
 		}
@@ -171,8 +172,7 @@ class SUtil
 				+ Lib.application.meta.get('file')
 				+ '-'
 				+ Date.now().toString().replace(' ', '-').replace(':', "'")
-				+ '.log',
-				msg);
+				+ '.log', msg);
 		}
 		catch (e:Dynamic)
 		{
@@ -243,12 +243,12 @@ class SUtil
 		}
 	}
 
-        public static function saveClipboard(fileData:String = 'you forgot something to add in your code')
+	public static function saveClipboard(fileData:String = 'you forgot something to add in your code')
 	{
 		openfl.system.System.setClipboard(fileData);
-                #if android
+		#if android
 		Toast.makeText("Data Saved to Clipboard Successfully!", Toast.LENGTH_LONG);
-                #end
+		#end
 	}
 
 	public static function copyContent(copyPath:String, savePath:String):Void

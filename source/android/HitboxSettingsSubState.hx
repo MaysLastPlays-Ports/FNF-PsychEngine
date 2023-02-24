@@ -37,21 +37,13 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 	public function new()
 	{
 		title = 'Hitbox Settings';
-		rpcTitle = 'Hitbox Settings Menu'; //hi, you can ask what is that, i will answer it's all what you needed lol.
+		rpcTitle = 'Hitbox Settings Menu'; // hi, you can ask what is that, i will answer it's all what you needed lol.
 
-		var option:Option = new Option('Hitbox Mode:',
-			"Choose your Hitbox Style!  -mariomaster",
-			'hitboxmode',
-			'string',
-			'Classic',
-			['Classic', 'New']);
-		  addOption(option);
-		  
-		var option:Option = new Option('Hitbox Opacity', //mariomaster was here again
-			'Changes opacity -omg',
-			'hitboxalpha',
-			'float',
-			0.2);
+		var option:Option = new Option('Hitbox Mode:', "Choose your Hitbox Style!  -mariomaster", 'hitboxmode', 'string', 'Classic', ['Classic', 'New']);
+		addOption(option);
+
+		var option:Option = new Option('Hitbox Opacity', // mariomaster was here again
+			'Changes opacity -omg', 'hitboxalpha', 'float', 0.2);
 		option.scrollSpeed = 1.6;
 		option.minValue = 0.0;
 		option.maxValue = 1;
@@ -61,19 +53,18 @@ class HitboxSettingsSubState extends BaseOptionsMenu
 
 		super();
 	}
-
-/*
-	override function update(elapsed:Float)
-	{
-		super.update(elapsed);
-			#if android
-		if (FlxG.android.justReleased.BACK)
+	/*
+		override function update(elapsed:Float)
 		{
-			FlxTransitionableState.skipNextTransIn = true;
-			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new options.OptionsState());
-	}
-		#end
+			super.update(elapsed);
+				#if android
+			if (FlxG.android.justReleased.BACK)
+			{
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+				MusicBeatState.switchState(new options.OptionsState());
 		}
-	*/ //why this exists?!?¡
+			#end
+			}
+	 */ // why this exists?!?¡
 }

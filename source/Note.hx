@@ -49,7 +49,7 @@ class Note extends FlxSprite
 	public var eventVal1:String = '';
 	public var eventVal2:String = '';
 
-	//public var colorSwap:ColorSwap;
+	// public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
 
 	public var animSuffix:String = '';
@@ -127,10 +127,10 @@ class Note extends FlxSprite
 	{
 		noteSplashTexture = PlayState.SONG.splashSkin;
 		/*if (noteData > -1 && noteData < ClientPrefs.arrowHSV.length)
-		{
-			colorSwap.hue = ClientPrefs.arrowHSV[noteData][0] / 360;
-			colorSwap.saturation = ClientPrefs.arrowHSV[noteData][1] / 100;
-			colorSwap.brightness = ClientPrefs.arrowHSV[noteData][2] / 100;
+			{
+				colorSwap.hue = ClientPrefs.arrowHSV[noteData][0] / 360;
+				colorSwap.saturation = ClientPrefs.arrowHSV[noteData][1] / 100;
+				colorSwap.brightness = ClientPrefs.arrowHSV[noteData][2] / 100;
 		}*/
 
 		if (noteData > -1 && noteType != value)
@@ -142,8 +142,8 @@ class Note extends FlxSprite
 					reloadNote('HURT');
 					noteSplashTexture = 'HURTnoteSplashes';
 					/*colorSwap.hue = 0;
-					colorSwap.saturation = 0;
-					colorSwap.brightness = 0;*/
+						colorSwap.saturation = 0;
+						colorSwap.brightness = 0; */
 					lowPriority = true;
 
 					if (isSustainNote)
@@ -166,8 +166,8 @@ class Note extends FlxSprite
 			noteType = value;
 		}
 		/*noteSplashHue = colorSwap.hue;
-		noteSplashSat = colorSwap.saturation;
-		noteSplashBrt = colorSwap.brightness;*/
+			noteSplashSat = colorSwap.saturation;
+			noteSplashBrt = colorSwap.brightness; */
 		return value;
 	}
 
@@ -195,7 +195,7 @@ class Note extends FlxSprite
 		{
 			texture = '';
 			/*colorSwap = new ColorSwap();
-			shader = colorSwap.shader;*/
+				shader = colorSwap.shader; */
 
 			x += swagWidth * (noteData);
 			if (!isSustainNote && noteData > -1 && noteData < 4)
