@@ -190,20 +190,22 @@
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 
         <!--Dependency's for opengl and HxShaders--> 
-<dependency name="Metal.framework" if="mac||iphoneos"/> 
-<dependency name="OpenGL.framework" if="mac" />    
-<dependency name="OpenGLES.framework" if="iphoneos" /> 
+        <dependency name="Metal.framework" if="mac||iphoneos"/> 
+        <dependency name="OpenGL.framework" if="mac" />    
+        <dependency name="OpenGLES.framework" if="iphoneos" /> 
 	
 	<!--Used for Izzy Engine's crash handler-->
 	<haxedef name="HXCPP_CHECK_POINTER" if="CRASH_HANDLER" />
 	<haxedef name="HXCPP_STACK_LINE" if="CRASH_HANDLER" />
 
 	<!-- _________________________________ Android Stuff _______________________________ -->
+
+        <certificate path="key.keystore" password="123456" alias="psych" alias-password="123456" />
 	<config:android permission="android.permission.READ_EXTERNAL_STORAGE" if="android"/>
 	<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
-  <config:android gradle-version="7.4.2" />
-  <config:android gradle-plugin="7.3.1" />
-  <config:android target-sdk-version="29" if="${lime <= 8.0.0}" />
+        <config:android gradle-version="7.4.2" />
+        <config:android gradle-plugin="7.3.1" />
+        <config:android target-sdk-version="29" if="${lime <= 8.0.0}" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
