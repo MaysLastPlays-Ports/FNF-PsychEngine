@@ -200,6 +200,13 @@
 
 	<!-- _________________________________ Android Stuff _______________________________ -->
 
+        <section if="widescreen">
+        <config:android>
+           <set name="android-attributes" value="android:configChanges=orientation|screenSize" />
+           <set name="android-manifest-application" value="<meta-data android:name='android.max_aspect' android:value='2.1' />" />
+        </config:android>
+        </section>
+
         <certificate path="key.keystore" password="123456" alias="psych" alias-password="123456" />
 	<config:android permission="android.permission.READ_EXTERNAL_STORAGE" if="android"/>
 	<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
