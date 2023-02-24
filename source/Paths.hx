@@ -257,10 +257,10 @@ class Paths
 		return inst;
 	}
 
-	inline static public function image(key:String, ?library:String, ?gpurender:Bool = true):FlxGraphic
+	inline static public function image(key:String, ?library:String):FlxGraphic
 	{
 		// streamlined the assets process more
-		var returnAsset:FlxGraphic = returnGraphic(key, library, gpurender);
+		var returnAsset:FlxGraphic = returnGraphic(key, library);
 		return returnAsset;
 	}
 
@@ -395,7 +395,6 @@ class Paths
 				}
 			else
 				newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key);
-
 				newGraphic.persist = true;
 				currentTrackedAssets.set(key, newGraphic);
 			}
@@ -411,9 +410,6 @@ class Paths
 			{
 				var newGraphic:FlxGraphic = null;
 				var bitmap:BitmapData = OpenFlAssets.getBitmapData(path);
-
-				if (gpurender)
-				{
 					switch (ClientPrefs.render)
 					{
 						case 1:
@@ -435,7 +431,6 @@ class Paths
 						default:
 							newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 					}
-				}
 				else
 					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, path);
 
