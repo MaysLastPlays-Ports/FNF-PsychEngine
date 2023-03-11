@@ -17,7 +17,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import openfl.utils.Assets;
 
-class AndroidControlsSubState extends FlxSubState
+class AndroidControlsMenu extends FlxSubState
 {
 	final controlsItems:Array<String> = ['Pad-Right', 'Pad-Left', 'Pad-Custom', 'Pad-Duo', 'Hitbox', 'Keyboard'];
 	var virtualPad:FlxVirtualPad;
