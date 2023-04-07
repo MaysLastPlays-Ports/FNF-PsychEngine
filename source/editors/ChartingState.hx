@@ -1879,7 +1879,7 @@ class ChartingState extends MusicBeatState
 					var beat:Float = curDecBeat;
 					var snap:Float = quantization / 4;
 					var increase:Float = 1 / snap;
-					if (FlxG.keys.pressed.UP  #if android || _virtualpad.buttonUp.pressed #end)
+					if (FlxG.keys.pressed.UP #if android || _virtualpad.buttonUp.pressed #end)
 					{
 						var fuck:Float = CoolUtil.quantize(beat, snap) - increase; //(Math.floor((beat+snap) / snap) * snap);
 						FlxG.sound.music.time = Conductor.beatToSeconds(fuck);
