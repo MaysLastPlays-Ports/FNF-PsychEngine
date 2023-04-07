@@ -1809,7 +1809,7 @@ class ChartingState extends MusicBeatState
 
 			if (!FlxG.keys.pressed.ALT && FlxG.keys.justPressed.R)
 			{
-				if (FlxG.keys.pressed.SHIFT #if android || _virtualpad.buttonY.pressed #end))
+				if (FlxG.keys.pressed.SHIFT #if android || _virtualpad.buttonY.pressed #end)
 					resetSection(true);
 				else
 					resetSection();
