@@ -1809,7 +1809,7 @@ class ChartingState extends MusicBeatState
 
 			if (!FlxG.keys.pressed.ALT && FlxG.keys.justPressed.R)
 			{
-				if (FlxG.keys.pressed.SHIFT)
+				if (FlxG.keys.pressed.SHIFT #if android || _virtualpad.buttonY.pressed #end))
 					resetSection(true);
 				else
 					resetSection();
@@ -1946,7 +1946,7 @@ class ChartingState extends MusicBeatState
 					var beat:Float = curDecBeat;
 					var snap:Float = quantization / 4;
 					var increase:Float = 1 / snap;
-					if (FlxG.keys.pressed.UP #if android || _virtualpad.buttonUp.pressed #end)
+					if (FlxG.keys.pressed.UP)
 					{
 						var fuck:Float = CoolUtil.quantize(beat, snap) - increase;
 						feces = Conductor.beatToSeconds(fuck);
