@@ -1933,7 +1933,7 @@ class ChartingState extends MusicBeatState
 
 				var feces:Float;
         //Jesus fuck this took me so much mother fucking time AAAAAAAAAA
-				if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.DOWN #if android || virtualPad.buttonUp.justPressed || virtualPad.buttonDown.justPressed #end)
+				if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.DOWN #if android || _virtualpad.buttonUp.justPressed || _virtualpad.buttonDown.justPressed #end)
 				{
 					FlxG.sound.music.pause();
 
