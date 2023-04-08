@@ -99,7 +99,8 @@ class ChartingState extends MusicBeatState
 	];
 
 	var _file:FileReference;
-
+    var postfix:String = '';
+    
 	var UI_box:FlxUITabMenu;
 
 	public static var goToPlayState:Bool = false;
@@ -159,7 +160,6 @@ class ChartingState extends MusicBeatState
 	var value1InputText:FlxUIInputText;
 	var value2InputText:FlxUIInputText;
 	var currentSongName:String;
-
 	var zoomTxt:FlxText;
 
 	var zoomList:Array<Float> = [
@@ -601,7 +601,8 @@ class ChartingState extends MusicBeatState
 		});
 		stageDropDown.selectedLabel = _song.stage;
 		blockPressWhileScrolling.push(stageDropDown);
-
+		
+		
 		var skin = PlayState.SONG.arrowSkin;
 		if(skin == null) skin = '';
 		noteSkinInputText = new FlxUIInputText(player2DropDown.x, player2DropDown.y + 50, 150, skin, 8);
@@ -1401,7 +1402,7 @@ class ChartingState extends MusicBeatState
 			bullshitUI.remove(bullshitUI.members[0], true);
 		}
 
-		// general shit
+		// general freak
 		var title:FlxText = new FlxText(UI_box.x + 20, UI_box.y + 20, 0);
 		bullshitUI.add(title);
 	}
@@ -1428,7 +1429,7 @@ class ChartingState extends MusicBeatState
 
 				case 'Change BPM':
 					_song.notes[curSec].changeBPM = check.checked;
-					FlxG.log.add('changed bpm shit');
+					FlxG.log.add('changed bpm freak');
 				case "Alt Animation":
 					_song.notes[curSec].altAnim = check.checked;
 			}
@@ -1623,6 +1624,7 @@ class ChartingState extends MusicBeatState
 			}
 		}
 		#else
+
 		if (FlxG.mouse.x > gridBG.x
 			&& FlxG.mouse.x < gridBG.x + gridBG.width
 			&& FlxG.mouse.y > gridBG.y
@@ -1758,16 +1760,18 @@ class ChartingState extends MusicBeatState
 				FlxG.mouse.visible = false;
 				return;
 			}
-
+ 
 			if(FlxG.keys.justPressed.Z #if android || _virtualpad.buttonZ.justPressed #end && curZoom > 0 && !FlxG.keys.pressed.CONTROL) {
 				undo();
 			}
 
-			if(FlxG.keys.justPressed.Z #if android || _virtualpad.buttonZ.justPressed #end && curZoom > 0 && !FlxG.keys.pressed.CONTROL) {
+
+
+			if((FlxG.keys.justPressed.Z #if android || _virtualpad.buttonZ.justPressed #end) && curZoom > 0 && !FlxG.keys.pressed.CONTROL) {
 				--curZoom;
 				updateZoom();
 			}
-			if(FlxG.keys.justPressed.X #if android || _virtualpad.buttonC.justPressed #end && curZoom < zoomList.length-1) {
+			if(FlxG.keys.justPressed.X #if android || _virtualpPad.buttonC.justPressed #end && curZoom < zoomList.length-1) {
 				curZoom++;
 				updateZoom();
 			}
@@ -1843,7 +1847,7 @@ class ChartingState extends MusicBeatState
 			}
 			#end
 
-			//ARROW VORTEX SHIT NO DEADASS
+			//ARROW VORTEX freak NO DEADASS
 
 
 
@@ -1857,7 +1861,7 @@ class ChartingState extends MusicBeatState
 
 				var daTime:Float = 700 * FlxG.elapsed * holdingShift;
 
-				if (FlxG.keys.pressed.W)
+				if (FlxG.keys.pressed.W #if android || _virtualpad.buttonUp.pressed #end)
 				{
 					FlxG.sound.music.time -= daTime;
 				}
@@ -1879,7 +1883,7 @@ class ChartingState extends MusicBeatState
 					var beat:Float = curDecBeat;
 					var snap:Float = quantization / 4;
 					var increase:Float = 1 / snap;
-					if (FlxG.keys.pressed.UP)
+					if (FlxG.keys.pressed.UP )
 					{
 						var fuck:Float = CoolUtil.quantize(beat, snap) - increase; //(Math.floor((beat+snap) / snap) * snap);
 						FlxG.sound.music.time = Conductor.beatToSeconds(fuck);
@@ -1932,7 +1936,6 @@ class ChartingState extends MusicBeatState
 				}
 
 				var feces:Float;
-        //Jesus fuck this took me so much mother fucking time AAAAAAAAAA
 				if (FlxG.keys.justPressed.UP || FlxG.keys.justPressed.DOWN #if android || _virtualpad.buttonUp.justPressed || _virtualpad.buttonDown.justPressed #end)
 				{
 					FlxG.sound.music.pause();
@@ -1946,7 +1949,7 @@ class ChartingState extends MusicBeatState
 					var beat:Float = curDecBeat;
 					var snap:Float = quantization / 4;
 					var increase:Float = 1 / snap;
-					if (FlxG.keys.pressed.UP)
+					if (FlxG.keys.pressed.UP #if android || _virtualpad.buttonUp.pressed #end)
 					{
 						var fuck:Float = CoolUtil.quantize(beat, snap) - increase;
 						feces = Conductor.beatToSeconds(fuck);
@@ -2157,7 +2160,7 @@ class ChartingState extends MusicBeatState
 			var leVocals:String = Paths.getPath(currentSongName + '/Voices.' + Paths.SOUND_EXT, SOUND, 'songs');
 			if (OpenFlAssets.exists(leVocals)) { //Vanilla voices
 				audioBuffers[1] = AudioBuffer.fromFile('./' + leVocals.substr(6));
-				//trace('Voices found, LETS FUCKING GOOOO');
+				//trace('Voices found, LETS freakING GOOOO');
 			}
 		#if MODS_ALLOWED
 		}
@@ -2468,7 +2471,7 @@ class ChartingState extends MusicBeatState
 		updateGrid();
 
 		FlxG.sound.music.pause();
-		// Basically old shit from changeSection???
+		// Basically old freak from changeSection???
 		FlxG.sound.music.time = sectionStartTime();
 
 		if (songBeginning)
@@ -3007,7 +3010,7 @@ class ChartingState extends MusicBeatState
 
 	function loadJson(song:String):Void
 	{
-		//shitty null fix, i fucking hate it when this happens
+		//freakty null fix, i freaking hate it when this happens
 		//make it look sexier if possible
 		if (CoolUtil.difficulties[PlayState.storyDifficulty] != CoolUtil.defaultDifficulty) {
 			if(CoolUtil.difficulties[PlayState.storyDifficulty] == null){
@@ -3016,8 +3019,8 @@ class ChartingState extends MusicBeatState
 				PlayState.SONG = Song.loadFromJson(song.toLowerCase() + "-" + CoolUtil.difficulties[PlayState.storyDifficulty], song.toLowerCase());
 			}
 		}else{
-		PlayState.SONG = Song.loadFromJson(song.toLowerCase(), song.toLowerCase());
-		}
+        PlayState.SONG = Song.loadFromJson(song.toLowerCase() + postfix, song.toLowerCase());
+        }
 		MusicBeatState.resetState();
 	}
 
@@ -3046,7 +3049,7 @@ class ChartingState extends MusicBeatState
 		if ((data != null) && (data.length > 0))
 		{
 			#if android
-			SUtil.saveContent(Paths.formatToSongPath(_song.song), ".json", data.trim());
+			SUtil.saveContent(Paths.formatToSongPath(_song.song) + postfix, ".json", data.trim());
 			#else
 			_file = new FileReference();
 			_file.addEventListener(Event.COMPLETE, onSaveComplete);
