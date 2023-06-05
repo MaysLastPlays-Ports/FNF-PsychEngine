@@ -5280,8 +5280,8 @@ class PlayState extends MusicBeatState
 	}
 
 	public function callonhx(functocall:String, ?args:Array<Dynamic>, ?className:String) {
-		for (i...SScriptArray.length) {
-			SScriptArray[i].call(functocall, args, className)
+		for (i in 0...SScriptArray.length) {
+			SScriptArray[i].call(functocall, args, className);
 		}
 	}
 
