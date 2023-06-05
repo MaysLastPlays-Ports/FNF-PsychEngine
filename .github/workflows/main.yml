@@ -79,7 +79,6 @@ jobs:
           haxelib set openfl 9.1.0
           haxelib set flixel 5.2.1
           haxelib set flixel-addons 2.11.0
-          haxelib set hxcpp
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
