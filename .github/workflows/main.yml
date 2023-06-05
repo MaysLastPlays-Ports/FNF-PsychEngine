@@ -62,6 +62,7 @@ jobs:
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
+          haxelib git SScript https://github.com/TheWorldMachinima/SScript.git
           haxelib install hxcpp-debug-server
           haxelib list
       - name: Create Version Tag
