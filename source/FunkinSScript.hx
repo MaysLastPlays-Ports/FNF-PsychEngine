@@ -22,7 +22,17 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
 import openfl.Lib;
-import *;
+import PlayState;
+import Main;
+import ClientPrefs;
+import GameOverSubstate;
+import Paths;
+import Note;
+import Alphabet;
+import InputFormatter;
+import Character;
+import Conductor;
+import CreditsState;
 
 final class FunkinSScript extends tea.SScript
 {
@@ -72,7 +82,7 @@ final class FunkinSScript extends tea.SScript
 		set('Note', Note);
 		set('Paths', Paths);
 		set('PlayState', PlayState);
-    set('game', PlayState.instance);
+                set('game', PlayState.instance);
 		set('this', this);
 
 		set('add', function(FlxBasic:FlxBasic)
