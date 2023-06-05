@@ -131,6 +131,9 @@
 	<haxelib name="hscript" />
 	<haxelib name="SScript"/>
         <haxedef name="hscriptPos"/>
+	
+	<!--Set this to the engine you're using!-->
+        <define name="PSYCH" />
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
