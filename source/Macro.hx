@@ -1,4 +1,4 @@
-package macro;
+package;
 
 import haxe.macro.Compiler;
 import haxe.macro.ComplexTypeTools;
