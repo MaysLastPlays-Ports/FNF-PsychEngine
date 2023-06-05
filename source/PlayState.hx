@@ -76,6 +76,10 @@ import sys.io.File;
 #if VIDEOS_ALLOWED
 import VideoHandler as MP4Handler;
 #end
+	
+import modcharting.ModchartFuncs;
+import modcharting.NoteMovement;
+import modcharting.PlayfieldRenderer;
 
 using StringTools;
 
@@ -1071,6 +1075,9 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
+		playfieldRenderer = new PlayfieldRenderer(strumLineNotes, notes, this);
+		playfieldRenderer.cameras = [camHUD];
+		add(playfieldRenderer);
 		add(grpNoteSplashes);
 
 		if(ClientPrefs.timeBarType == 'Song Name')
@@ -1400,6 +1407,9 @@ class PlayState extends MusicBeatState
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 			FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 		}
+	
+	        ModchartFuncs.loadLuaFunctions();
+	
 		callOnLuas('onCreatePost', []);
 		callOnhx('onCreatePost', []);
 
@@ -2150,6 +2160,7 @@ class PlayState extends MusicBeatState
 			#end
 			generateStaticArrows(0);
 			generateStaticArrows(1);
+			NoteMovement.getDefaultStrumPos(this);
 			for (i in 0...playerStrums.length) {
 				setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
 				setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
