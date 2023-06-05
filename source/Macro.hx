@@ -33,7 +33,6 @@ class Macro
 		TypeTools,
 	];
 
-	macro
 	public static function checkOpenFL() 
 	{
 		final defines = Context.getDefines();
