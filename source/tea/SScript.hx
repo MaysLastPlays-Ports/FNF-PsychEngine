@@ -183,7 +183,7 @@ class SScript
 			defines = new Map();
 
 			var contents:String = null;
-			var path:String = macro.Macro.definePath;
+			var path:String = Macro.definePath;
 
 			if (FileSystem.exists(path))
 			{
@@ -282,7 +282,7 @@ class SScript
 		{
 			if (Tools.keys.contains(key))
 				throw '$key is a keyword, set something else';
-			else if (macro.Macro.macroClasses.contains(obj))
+			else if (Macro.macroClasses.contains(obj))
 				throw '$key cannot be a Macro class (tried to set ${Type.getClassName(obj)})';
 
 			SScriptX.variables[key] = obj;
