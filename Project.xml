@@ -129,7 +129,8 @@
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" />
-	<define name="hscriptPos" />
+	<haxelib name="SScript"/>
+        <haxedef name="hscriptPos"/>
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
@@ -142,8 +143,6 @@
 
 	<!-- Enables a terminal log prompt on debug builds -->
 	<haxelib name="hxcpp-debug-server" if="debug"/>
-	
-	<haxeflag name="--macro" value="allowPackage('flash')" />
 
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
