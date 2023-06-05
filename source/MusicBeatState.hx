@@ -21,7 +21,7 @@ import android.AndroidControls.AndroidControls;
 import android.FlxVirtualPad;
 #end
 
-class MusicBeatState extends FlxUIState
+class MusicBeatState extends modcharting.ModchartMusicBeatState
 {
 	private var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
