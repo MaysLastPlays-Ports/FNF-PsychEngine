@@ -20,12 +20,12 @@ jobs:
         uses: nttld/setup-ndk@main
         id: setup-ndk
         with:
-          ndk-version: r15c
+          ndk-version: r21e
       - name: Setup Java JDK
         uses: actions/setup-java@main
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 19
       - name: Setup Android SDK
         uses: android-actions/setup-android@main
 
