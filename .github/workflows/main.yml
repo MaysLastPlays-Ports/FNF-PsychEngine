@@ -51,10 +51,10 @@ jobs:
           haxelib run lime setup android
           haxelib install flixel-tools
           haxelib install flixel-ui
-          haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons.git dev
+          haxelib install flixel-addons 2.11.0
           haxelib install tjson
           haxelib install hxjsonast
-          haxelib install hxCodec 2.5.1
+          haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib install swf 3.2.0
           haxelib git polymod-joalor64 https://github.com/Joalor64GH/polymod-joalor64
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
@@ -66,7 +66,7 @@ jobs:
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib install hxcpp-debug-server
           haxelib install actuate
-          haxelib git extension-androidtools https://github.com/jigsaw-4277821/extension-androidtools.git
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
