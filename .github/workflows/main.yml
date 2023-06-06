@@ -48,7 +48,7 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp 4.2.1
+          haxelib install hxcpp
           haxelib install lime 7.9.0
           haxelib install openfl 9.1.0
           haxelib install flixel 5.2.1
@@ -80,7 +80,7 @@ jobs:
           haxelib set openfl 9.1.0
           haxelib set flixel 5.2.1
           haxelib set flixel-addons 2.11.0
-          haxelib set hxcpp 4.2.1
+          haxelib set hxcpp 4.3.2
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
