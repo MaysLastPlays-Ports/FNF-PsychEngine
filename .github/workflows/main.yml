@@ -74,7 +74,7 @@ jobs:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Building
-        run: haxelib run lime build android -${{ matrix.arch }}
+        run: haxelib run lime build Project.xml android --app-version="4.0.0-${{ github.run_id}}"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
