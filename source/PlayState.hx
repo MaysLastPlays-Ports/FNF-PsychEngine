@@ -127,6 +127,8 @@ class PlayState extends MusicBeatState
 	public var modchartTexts:Map<String, ModchartText> = new Map();
 	public var modchartSaves:Map<String, FlxSave> = new Map();
 	#end
+		
+	public var HxCodes:Map<String, SScriptHandler> = new Map();
 
 	public var BF_X:Float = 770;
 	public var BF_Y:Float = 100;
