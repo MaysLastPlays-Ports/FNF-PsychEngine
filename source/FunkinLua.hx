@@ -909,7 +909,7 @@ class FunkinLua {
 		});
 		
 		Lua_helper.add_callback(lua, "setupHxScript", function(tag:String) {
-			var script:SScriptHandler;
+			var script:SScriptHandler = new SScriptHandler();
 			PlayState.instance.HxCodes.set(tag, script);
 		});
 		
