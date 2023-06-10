@@ -923,13 +923,14 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, ?retTF:Bool = false, ?classToRun:String = null) {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
-				var funcRun
+				var funcRun = null;
 				if (classToRun == null) {
 					funcRun = PlayState.instance.HxCodes.get(tag).call(func);
 				} else {
 					funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
 				}
-				if (retTF) return funcRun.returnValue;
+				if (retTF)
+					if (!funcRun == null) return funcRun.returnValue;
 			}
 		});
 		
