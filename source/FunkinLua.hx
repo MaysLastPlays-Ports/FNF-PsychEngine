@@ -80,7 +80,7 @@ class FunkinLua {
 	public static var hscript:HScript = null;
 	#end
 		
-	pubic static var SScriptLua:SScriptHandler = null;
+	public static var SScriptLua:SScriptHandler = null;
 	
 	public function new(script:String) {
 		#if LUA_ALLOWED
