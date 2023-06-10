@@ -51,6 +51,8 @@ import openfl.net.FileReference;
 import openfl.utils.Assets as OpenFlAssets;
 import openfl.utils.ByteArray;
 
+import modcharting.ModchartEditorState;
+
 using StringTools;
 #if sys
 import flash.media.Sound;
@@ -1576,7 +1578,6 @@ class ChartingState extends MusicBeatState
 		FlxG.watch.addQuick('daBeat', curBeat);
 		FlxG.watch.addQuick('daStep', curStep);
 
-		#if android
 		for (touch in FlxG.touches.list)
 		{
 			if (touch.x > gridBG.x
@@ -1623,7 +1624,6 @@ class ChartingState extends MusicBeatState
 				}
 			}
 		}
-		#else
 
 		if (FlxG.mouse.x > gridBG.x
 			&& FlxG.mouse.x < gridBG.x + gridBG.width
@@ -1681,7 +1681,6 @@ class ChartingState extends MusicBeatState
 				}
 			}
 		}
-		#end
 
 		var blockInput:Bool = false;
 		for (inputText in blockPressWhileTypingOn) {
@@ -1811,6 +1810,11 @@ class ChartingState extends MusicBeatState
 				}
 			}
 
+			if (FlxG.keys.justPressed.NINE)
+			{
+				MusicBeatSubstate.switchState(new ModchartEditorState());
+			}
+
 			if (!FlxG.keys.pressed.ALT && FlxG.keys.justPressed.R)
 			{
 				if (FlxG.keys.pressed.SHIFT #if android || _virtualpad.buttonY.pressed #end)
@@ -1819,7 +1823,6 @@ class ChartingState extends MusicBeatState
 					resetSection();
 			}
 
-			#if !android
 			if (FlxG.mouse.wheel != 0)
 			{
 				FlxG.sound.music.pause();
@@ -1845,7 +1848,6 @@ class ChartingState extends MusicBeatState
 					vocals.time = FlxG.sound.music.time;
 				}
 			}
-			#end
 
 			//ARROW VORTEX freak NO DEADASS
 
@@ -2917,14 +2919,7 @@ class ChartingState extends MusicBeatState
 		//	undos.push(newsong);
 		var noteStrum = getStrumTime(dummyArrow.y, false) + sectionStartTime();
 		var noteData = 0;
-		#if android
-		for (touch in FlxG.touches.list)
-		{
-			noteData = Math.floor((touch.x - GRID_SIZE) / GRID_SIZE);
-		}
-		#else
 		noteData = Math.floor((FlxG.mouse.x - GRID_SIZE) / GRID_SIZE);
-		#end
 		var noteSus = 0;
 		var daAlt = false;
 		var daType = currentType;

@@ -69,6 +69,7 @@ import Song.SwagSong;
 import MusicBeatSubstate;
 #end
 
+import editors.ChartingState;
 
 import modcharting.*;
 import modcharting.PlayfieldRenderer.StrumNoteType;
@@ -767,7 +768,7 @@ class ModchartEditorState extends MusicBeatState
                 #if PSYCH 
                 StageData.loadDirectory(PlayState.SONG);
                 #end
-                LoadingState.loadAndSwitchState(new PlayState());
+                LoadingState.loadAndSwitchState(new ChartingState());
             };
             if (hasUnsavedChanges)
             {
@@ -2013,11 +2014,15 @@ class ModchartEditorState extends MusicBeatState
         //sys.io.File.saveContent("modchart.json", data.trim()); 
 		if ((data != null) && (data.length > 0))
         {
+            #if android
+            SUtil.saveContent("modchart", ".json", data.trim());
+            #else
             _file = new FileReference();
             _file.addEventListener(openfl.events.Event.COMPLETE, onSaveComplete);
             _file.addEventListener(openfl.events.Event.CANCEL, onSaveCancel);
             _file.addEventListener(IOErrorEvent.IO_ERROR, onSaveError);
             _file.save(data.trim(), "modchart.json");
+            #end
         }
         #end
 
