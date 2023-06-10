@@ -1812,7 +1812,7 @@ class ChartingState extends MusicBeatState
 
 			if (FlxG.keys.justPressed.NINE)
 			{
-				MusicBeatSubstate.switchState(new ModchartEditorState());
+				MusicBeatState.switchState(new ModchartEditorState());
 			}
 
 			if (!FlxG.keys.pressed.ALT && FlxG.keys.justPressed.R)
