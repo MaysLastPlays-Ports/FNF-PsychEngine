@@ -909,20 +909,19 @@ class FunkinLua {
 		});
 		
 		Lua_helper.add_callback(lua, "setupHxScript", function(tag:String) {
-			var script = new SScriptHandler();
 			PlayState.instance.HxCodes.set(tag, script);
 		});
 		
 		Lua_helper.add_callback(lua, "addHxScript", function(tag:String, fileToAdd:String) {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
-				PlayState.instance.HxCodes.get(tag) = SScriptHandler(SUtil.getPath() + fileToRun);
+				PlayState.instance.HxCodes.get(tag) = new SScriptHandler(SUtil.getPath() + fileToRun);
 			}
 		});
 		
-		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, retTF:Bool, classToRun:String) {
+		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, ?retTF:Bool = false, ?classToRun:String = null) {
 			if (PlayState.instance.HxCodes.exists(tag)) {
-				if (!classToRun == nul) {
+				if (!classToRun == null) {
 					var funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
 				} else {
 					var funcRun = PlayState.instance.HxCodes.get(tag).call(func);
