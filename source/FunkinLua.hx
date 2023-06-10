@@ -916,7 +916,7 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "addHxScript", function(tag:String, fileToAdd:String) {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
-				PlayState.instance.HxCodes.set(tag, new SScriptHandler(SUtil.getPath() + fileToAll));
+				PlayState.instance.HxCodes.set(tag, new SScriptHandler(SUtil.getPath() + fileToAdd));
 			}
 		});
 		
@@ -929,8 +929,7 @@ class FunkinLua {
 				} else {
 					funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
 				}
-				if (retTF)
-					if (!funcRun == null) return funcRun.returnValue;
+				if (retTF) return funcRun.returnValue;
 			}
 		});
 		
