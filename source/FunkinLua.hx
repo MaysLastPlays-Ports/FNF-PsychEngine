@@ -79,6 +79,8 @@ class FunkinLua {
 	#if hscript
 	public static var hscript:HScript = null;
 	#end
+		
+	pubic static var SScriptLua:SScriptHandler = null;
 	
 	public function new(script:String) {
 		#if LUA_ALLOWED
@@ -900,6 +902,37 @@ class FunkinLua {
 				luaTrace(scriptName + ":" + lastCalledFunction + " - " + e, false, false, FlxColor.RED);
 			}
 			#end
+		});
+		
+		Lua_helper.add_callback(lua, "runHaxeScript", function(fileToRun:String) {
+			var script:SScriptHandler = new SScriptHandler(SUtil.getPath() + fileToRun);
+		});
+		
+		Lua_helper.add_callback(lua, "setupHxScript", function(tag:String) {
+			var script = new SScriptHandler();
+			PlayState.instance.HxCodes.set(tag, script);
+		});
+		
+		Lua_helper.add_callback(lua, "addHxScript", function(tag:String, fileToAdd:String) {
+			if (PlayState.instance.HxCodes.exists(tag))
+			{
+				PlayState.instance.HxCodes.get(tag) = SScriptHandler(SUtil.getPath() + fileToRun);
+			}
+		});
+		
+		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, retTF:Bool, classToRun:String) {
+			if (PlayState.instance.HxCodes.exists(tag)) {
+				if (!classToRun == nul) {
+					var funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
+				} else {
+					var funcRun = PlayState.instance.HxCodes.get(tag).call(func);
+				}
+				if (retTf) return funcRun.returnValue;
+			}
+		});
+		
+		Lua_helper.add_callback(lua, "checkHxExists", function(tag:String) {
+			return PlayState.instance.HxCodes.exists(tag);
 		});
 
 		Lua_helper.add_callback(lua, "loadSong", function(?name:String = null, ?difficultyNum:Int = -1) {
@@ -3435,3 +3468,49 @@ class HScript
 	}
 }
 #end
+	
+class SScriptHandler extends tea.SScript
+{
+	public function new()
+	{
+		set('FlxG', FlxG);
+		set('FlxSprite', FlxSprite);
+		set('FlxCamera', FlxCamera);
+		set('FlxTimer', FlxTimer);
+		set('FlxTween', FlxTween);
+		set('FlxEase', FlxEase);
+		set('PlayState', PlayState);
+		set('game', PlayState.instance);
+		set('Paths', Paths);
+		set('Conductor', Conductor);
+		set('ClientPrefs', ClientPrefs);
+		set('Character', Character);
+		set('Alphabet', Alphabet);
+		set('CustomSubstate', CustomSubstate);
+		#if (!flash && sys)
+		set('FlxRuntimeShader', FlxRuntimeShader);
+		#end
+		set('ShaderFilter', openfl.filters.ShaderFilter);
+		set('StringTools', StringTools);
+
+		set('setVar', function(name:String, value:Dynamic)
+		{
+			PlayState.instance.variables.set(name, value);
+		});
+		set('getVar', function(name:String)
+		{
+			var result:Dynamic = null;
+			if(PlayState.instance.variables.exists(name)) result = PlayState.instance.variables.get(name);
+			return result;
+		});
+		set('removeVar', function(name:String)
+		{
+			if(PlayState.instance.variables.exists(name))
+			{
+				PlayState.instance.variables.remove(name);
+				return true;
+			}
+			return false;
+		});
+	}
+}
