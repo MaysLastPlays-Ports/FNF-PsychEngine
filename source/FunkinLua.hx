@@ -3471,8 +3471,10 @@ class HScript
 	
 class SScriptHandler extends tea.SScript
 {
-	public function new()
+	override function preset():Void
 	{
+		super.preset();
+		
 		set('FlxG', FlxG);
 		set('FlxSprite', FlxSprite);
 		set('FlxCamera', FlxCamera);
