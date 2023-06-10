@@ -920,7 +920,7 @@ class FunkinLua {
 			}
 		});
 		
-		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, ?retTF:Bool = false, ?classToRun:String = null) {
+		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, ?retTF:Bool = false, ?classToRun:String = null):Dynamic {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
 				if (classToRun == null) {
@@ -931,6 +931,7 @@ class FunkinLua {
 					if (retTF) return funcRun.returnValue;
 				}
 			}
+			return null;
 		});
 		
 		Lua_helper.add_callback(lua, "checkHxExists", function(tag:String) {
