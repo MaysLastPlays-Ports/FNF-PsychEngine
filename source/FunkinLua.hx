@@ -916,17 +916,18 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "addHxScript", function(tag:String, fileToAdd:String) {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
-				PlayState.instance.HxCodes.set(tag, new SScriptHandler(SUtil.getPath() + fileToRun));
+				PlayState.instance.HxCodes.set(tag, new SScriptHandler(SUtil.getPath() + fileToAll));
 			}
 		});
 		
 		Lua_helper.add_callback(lua, "callHx", function(tag:String, func:String, ?retTF:Bool = false, ?classToRun:String = null) {
 			if (PlayState.instance.HxCodes.exists(tag))
 			{
+				var funcRun
 				if (classToRun == null) {
-					var funcRun = PlayState.instance.HxCodes.get(tag).call(func);
+					funcRun = PlayState.instance.HxCodes.get(tag).call(func);
 				} else {
-					var funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
+					funcRun = PlayState.instance.HxCodes.get(tag).call(func, classToRun);
 				}
 				if (retTF) return funcRun.returnValue;
 			}
