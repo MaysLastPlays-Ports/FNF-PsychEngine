@@ -88,7 +88,7 @@ class Main extends Sprite
 			game.height = Math.ceil(stageHeight / game.zoom);
 		}
 	
-			SUtil.doTheCheck();
+		SUtil.doTheCheck();
 	
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
@@ -157,9 +157,9 @@ class Main extends Sprite
 		Sys.println("Crash dump saved in " + Path.normalize(path));
 
 		Application.current.window.alert(errMsg, "Error!");
-    #if desktop
-		DiscordClient.shutdown
-	 #end
+    	#if desktop
+		DiscordClient.shutdown();
+		#end
 		Sys.exit(1);
 	}
 	#end
