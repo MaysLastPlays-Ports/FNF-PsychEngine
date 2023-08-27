@@ -42,6 +42,16 @@ class FlxAnimationController implements IFlxDestroyable
 	 * The total number of frames in this image.
 	 * WARNING: assumes each row in the sprite sheet is full!
 	 */
+	#if (flixel >= "5.3.0")
+	public var numFrames(get, never):Int;
+
+	/**
+	 * The total number of frames in this image.
+	 * WARNING: assumes each row in the sprite sheet is full!
+	 */
+	@:deprecated("frames is deprecated, use numFrames")
+	#end
+
 	public var frames(get, never):Int;
 
 	/**
@@ -128,6 +138,14 @@ class FlxAnimationController implements IFlxDestroyable
 
 		return this;
 	}
+
+	#if (flixel >= "5.3.0")
+	@:allow(flixel.animation.FlxAnimation)
+	function getFrameDuration(index:Int)
+	{
+		return _sprite.frames.frames[index].duration;
+	}
+	#end
 
 	public function createPrerotated(?Controller:FlxAnimationController):Void
 	{
@@ -854,6 +872,11 @@ class FlxAnimationController implements IFlxDestroyable
 	{
 		return _sprite.numFrames;
 	}
+
+  #if (flixel >= "5.3.0")
+	inline function get_numFrames():Int
+		return _sprite.numFrames;
+	#end
 
 	/**
 	 * Helper function used for finding index of `FlxFrame` in `_framesData`'s frames array
