@@ -25,7 +25,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.6.2'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -47,11 +47,13 @@ class MainMenuState extends MusicBeatState
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 
+	var picke:FlxSprite;
+	var bfi:FlxSprite;
+	var chestai:FlxSprite;
+	var spoopya:FlxSprite;
+
 	override function create()
 	{
-		Paths.clearStoredMemory();
-		Paths.clearUnusedMemory();
-
 		#if MODS_ALLOWED
 		Paths.pushGlobalMods();
 		#end
@@ -133,6 +135,44 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
+		// - COISAS LMAO
+		//picke = new FlxSprite(-275, -150); // - possiçao!1!!1
+		picke = new FlxSprite(-275, -150).loadGraphic(Paths.image('mainchar/menu_picer'));
+		picke.frames = Paths.getSparrowAtlas('mainchar/menu_picer'); // - coloque seus cabos e imagem aqui
+		picke.animation.addByPrefix('almao', "deez pico idle", 24); // - em 'deez pico idle' mude para o seu xml
+		picke.animation.play('almao'); // - voce pode renomear o anim como quiser
+		picke.visible = false;
+		picke.setGraphicSize(Std.int(picke.width * 0.5)); // - tamanho
+		add(picke);
+
+		//bfi = new FlxSprite(-275, -215);
+		bfi = new FlxSprite(-275, -150).loadGraphic(Paths.image('mainchar/menu_bf'));
+		bfi.frames = Paths.getSparrowAtlas('mainchar/menu_bf');
+		bfi.animation.addByPrefix('BFEI', "deez bf idle", 24);
+		bfi.animation.play('BFEI');
+		bfi.visible = false;
+		bfi.setGraphicSize(Std.int(bfi.width * 0.5));
+		add(bfi);
+
+		//spoopya = new FlxSprite(-275, -215);
+		spoopya = new FlxSprite(-275, -215).loadGraphic(Paths.image('mainchar/menu_spooks'));
+		spoopya.frames = Paths.getSparrowAtlas('mainchar/menu_spooks');
+		spoopya.animation.addByPrefix('SPOOKEY', "deez skid and pump idle", 24);
+		spoopya.animation.play('SPOOKEY');
+		spoopya.visible = false;
+		spoopya.setGraphicSize(Std.int(spoopya.width * 0.5));
+		add(spoopya);
+
+		//chestai = new FlxSprite(-55, 75);
+		chestai = new FlxSprite(-55, 75).loadGraphic(Paths.image('mainchar/menu_chester'));
+		chestai.frames = Paths.getSparrowAtlas('mainchar/menu_chester');
+		chestai.animation.addByPrefix('chesterdobrawlstars', "deez chester idle", 24);
+		chestai.animation.play('chesterdobrawlstars');
+		chestai.visible = false;
+		chestai.setGraphicSize(Std.int(chestai.width * 0.5));
+		add(chestai);
+		// - FIM DAS COISAS LMAO
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -157,10 +197,6 @@ class MainMenuState extends MusicBeatState
 				ClientPrefs.saveSettings();
 			}
 		}
-		#end
-
-		#if android
-		addVirtualPad(UP_DOWN, A_B_E);
 		#end
 
 		super.create();
@@ -262,8 +298,8 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
-			#if (desktop || android)
-			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonE.justPressed #end)
+			#if desktop
+			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
@@ -279,6 +315,13 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 
+	function removeChar(char1:FlxSprite, char2:FlxSprite, char3:FlxSprite)
+	{
+		char1.visible = false;
+		char2.visible = false;
+		char3.visible = false;
+	}
+
 	function changeItem(huh:Int = 0)
 	{
 		curSelected += huh;
@@ -287,6 +330,22 @@ class MainMenuState extends MusicBeatState
 			curSelected = 0;
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
+
+		switch (optionShit[curSelected])
+        {
+            case 'story_mode':
+                removeChar(picke, spoopya, chestai);
+                bfi.visible = true;
+            case 'freeplay':
+                removeChar(bfi, picke, chestai);
+                spoopya.visible = true;
+            case 'credits':
+                removeChar(bfi, picke, spoopya);
+                chestai.visible = true;
+            case 'options':
+                removeChar(bfi, chestai, spoopya);
+                picke.visible = true;
+        }
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
