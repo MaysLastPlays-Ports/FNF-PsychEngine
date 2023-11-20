@@ -27,7 +27,8 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
-
+  public static var firstStart:Bool = true;
+  
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
@@ -36,9 +37,9 @@ class MainMenuState extends MusicBeatState
 		'story_mode',
 		'freeplay',
 		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
-		#if !switch 'donate', #end
+		//#if !switch 'donate', #end
 		'options'
 	];
 
@@ -129,7 +130,42 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
+			
+			
+			switch (i)
+			{
+			  case 0:
+			  menuItem.x = 299.4;
+			  menuItem.y = 35;
+			  
+			  case 1:
+			  menuItem.x = 569.8;
+			  menuItem.y = 193.75;
+			  
+			  case 2:
+			  menuItem.x = 716.5;
+			  menuItem.y = 393;
+			  
+			  
+			}
+			
+			
+			
+			if(FlxG.save.data.antialiasing)
+			   {
+			     menuItem.antialiasing = true;
+			   }
+			if (firstStart)
+			FlxTween.tween(menuItem,{y:60 + (i * 160)},1 + (i * 0.25),{ease: FlxEase.expolnOut, onComplete: function(flxTween:FlxTween)
+			   {
+			     
+			     changeItem();
+			   }});
+			   else
+			    menuItem.y = 60 + (i * 160);
 		}
+		
+		firstStart = false;
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
@@ -275,8 +311,18 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.screenCenter(X);
+		//	spr.screenCenter(X);
 		});
+	}
+	
+	override function beatHit() {
+	  super.beatHit();
+	  
+	  if (curBeat % 4 == 2)
+	  {
+	    FlxG.camera.zoom = 1.02;
+	  }
+	  
 	}
 
 	function changeItem(huh:Int = 0)
